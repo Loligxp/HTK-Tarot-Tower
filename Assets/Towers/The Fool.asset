@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: The Fool
   m_EditorClassIdentifier: 
   towerName: The Fool
-  description: basic tower
+  description: Basic tower
   UI_Sprite: {fileID: -2413806693520163455, guid: c48de60615f712d4f8708692939a9f0a, type: 3}
   tower_Sprite: {fileID: -2413806693520163455, guid: c48de60615f712d4f8708692939a9f0a, type: 3}
   cost: 5
   range: 6
-  fireRate: 5
+  fireRate: 0.5
   projectile: {fileID: 7163097339609867316, guid: 7825f3c9257d4c340b2c6c8abd7bf151, type: 3}

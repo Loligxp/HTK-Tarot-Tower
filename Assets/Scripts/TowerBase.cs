@@ -45,4 +45,11 @@ public class TowerBase : MonoBehaviour
             _enemiesInRange.Add(enemiesFound[i].gameObject);
         }
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1,0,0,0.2f);
+
+        Gizmos.DrawSphere(transform.position,_myTower.range);
+    }
 }

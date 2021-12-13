@@ -9,6 +9,9 @@ public class EnemyBase : MonoBehaviour
     private float _movementSpeed, _health;
 
     [SerializeField]
+    private int _worth;
+
+    [SerializeField]
     private Vector3 _goalPosition = Vector3.up;
 
     void Start()
@@ -29,7 +32,7 @@ public class EnemyBase : MonoBehaviour
 
         if(_health <= 0)
         {
-            Debug.Log("Enemy Died +1Mone or somthing");
+            GameManager.Instance.AddCoins(_worth);
             Destroy(this.gameObject);
         }
     }
