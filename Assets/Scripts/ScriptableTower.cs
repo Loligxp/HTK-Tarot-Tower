@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "TarotTower")]
+[CreateAssetMenu(menuName = "Tarot/TarotTower")]
 public class ScriptableTower : ScriptableObject
 {
+    public enum TowerTypes
+    {
+        shooter,
+        buffTower,
+    }
+
     public string towerName;
     public string description;
+    public TowerTypes towerType;
     public Sprite UI_Sprite;
     public Sprite tower_Sprite;
 
