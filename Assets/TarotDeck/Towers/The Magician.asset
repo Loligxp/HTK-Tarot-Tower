@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05886e83da7d8504c92ac8fa3c0b9a63, type: 3}
-  m_Name: New Scriptable Tower
+  m_Name: The Magician
   m_EditorClassIdentifier: 
-  towerName: 
-  description: 
+  towerName: The Magician
+  description: Flame Thrower
   UI_Sprite: {fileID: 0}
   tower_Sprite: {fileID: 0}
-  cost: 0
-  range: 0
-  fireRate: 0
-  projectile: {fileID: 0}
+  cost: 4
+  range: 2
+  fireRate: 5
+  projectile: {fileID: 7163097339609867316, guid: 43ca2ac2fd938f84497306041503753d, type: 3}

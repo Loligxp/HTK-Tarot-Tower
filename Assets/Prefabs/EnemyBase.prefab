@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 1.5
-  _health: 1
+  _health: 2
   _worth: 1
   _goalPosition: {x: 0.16, y: 0, z: 0}
 --- !u!212 &2661647817376065374

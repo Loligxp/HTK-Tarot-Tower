@@ -13,7 +13,10 @@ public class Projectile : MonoBehaviour
     public DamageTypes _bulletType;
 
     [SerializeField]
-    private float speed, damage;
+    public float speed, damage;
+
+    [SerializeField]
+    private int piercing;
 
     public Vector2 _direction;
 
@@ -27,7 +30,10 @@ public class Projectile : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponent<EnemyBase>().TakeDamge(damage, _bulletType);
-            Destroy(this.gameObject);
+            piercing--;
+
+            if(piercing < 0)
+                Destroy(this.gameObject);
         }
     }
 }
