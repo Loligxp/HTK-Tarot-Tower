@@ -229,3 +229,95 @@ Received Import Request.
   path: Assets/Scenes/UI SCENE.unity
   artifactKey: Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/UI SCENE.unity using Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49e69c6ef30bfbff837b104892c06295') in 0.003437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1592.151319 seconds.
+  path: Assets/Scenes/UI SCENE.unity
+  artifactKey: Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/UI SCENE.unity using Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bd38a0a50ad7f99c510fa97e73e6681') in 0.003655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 871.964037 seconds.
+  path: Assets/Scenes/StartScreen.unity
+  artifactKey: Guid(af552ea2e6d8790479f155d7565da0fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/StartScreen.unity using Guid(af552ea2e6d8790479f155d7565da0fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07c405c8a71cf171bca3809041d55ca9') in 0.011731 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.233800 seconds.
+  path: Assets/Scenes/UI SCENE.unity
+  artifactKey: Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/UI SCENE.unity using Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d5fc25eb0fbf77d93b46e78da3ffe78') in 0.004573 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011537 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\savar\Documents\GitHub\FrogTowerDefense\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\savar\Documents\GitHub\FrogTowerDefense\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.462 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1463ms)
+		BeginReloadAssembly (296ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (35ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (119ms)
+		EndReloadAssembly (1059ms)
+			LoadAssemblies (124ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (281ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (93ms)
+			SetupLoadedEditorAssemblies (499ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (360ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3909 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (0.7 MB). Loaded Objects now: 4387.
+Memory consumption went from 153.2 MB to 152.6 MB.
+Total: 4.741400 ms (FindLiveObjects: 0.302300 ms CreateObjectMapping: 0.187700 ms MarkObjects: 3.492100 ms  DeleteObjects: 0.757000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3004.720742 seconds.
+  path: Assets/Scenes/UI SCENE.unity
+  artifactKey: Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/UI SCENE.unity using Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bc95eaee7105ebfe886d8e57a2274d4') in 0.065101 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 231.574271 seconds.
+  path: Assets/Scenes/StartScreen.unity
+  artifactKey: Guid(af552ea2e6d8790479f155d7565da0fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/StartScreen.unity using Guid(af552ea2e6d8790479f155d7565da0fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5251104fcf410eaf29cbdd85d9371171') in 0.009196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 275.172065 seconds.
+  path: Assets/Scenes/UI SCENE.unity
+  artifactKey: Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/UI SCENE.unity using Guid(bcdf0b530fbf62c43946ba0f6ac822ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfdb99d15bf6c437f27755055f2aaca8') in 0.004207 seconds 
