@@ -24,6 +24,6 @@ public class AOE_Attack : MonoBehaviour
                 enemy.GetComponent<EnemyBase>().TakeDamge(AOE_Damage, Projectile.DamageTypes.Normal);
 
         }
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 3);
     }
 }
