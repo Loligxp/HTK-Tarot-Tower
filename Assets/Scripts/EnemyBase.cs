@@ -13,16 +13,15 @@ public class EnemyBase : MonoBehaviour
 
     [SerializeField]
     private Vector3 _goalPosition = Vector3.up;
+    public List<ScriptableDebuffs> _activeDebuffs;
+    public float burnStrenght, freezeStrenght;
 
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position,_goalPosition,Time.deltaTime * _movementSpeed);
+        transform.position = Vector2.MoveTowards(transform.position,_goalPosition,Time.deltaTime * Mathf.Clamp(_movementSpeed - freezeStrenght,0,99));
+        if (burnStrenght > 0)
+            TakeDamge(burnStrenght * Time.deltaTime,Projectile.DamageTypes.Normal);
 
         if(_goalPosition == Vector3.zero)
         {
@@ -36,6 +35,33 @@ public class EnemyBase : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
+    public IEnumerator AddDebuff(ScriptableDebuffs newBuff)
+    {
+        _activeDebuffs.Add(newBuff);
+        UpdateBuffs();
+        Debug.Log("atach " + newBuff.debuffLenght);
+        yield return new WaitForSeconds(newBuff.debuffLenght);
+        Debug.Log("deTach");
+        _activeDebuffs.Remove(newBuff);
+        UpdateBuffs();
+
+    }
+
+    public void UpdateBuffs()
+    {
+        burnStrenght = 0;
+        freezeStrenght = 0;
+
+        for (int i = 0; i < _activeDebuffs.Count; i++)
+        {
+            if (_activeDebuffs[i].fireDebuff > burnStrenght)
+                burnStrenght = _activeDebuffs[i].fireDebuff;
+
+            if (_activeDebuffs[i].freezeDebuff > freezeStrenght)
+                freezeStrenght = _activeDebuffs[i].freezeDebuff;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -45,7 +71,7 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    public void TakeDamge(float damage, Projectile.DamageTypes _damageType)
+    public void TakeDamge(float damage, Projectile.DamageTypes _damageType) //_damageType Might be unnecesarry; Remove later 
     {
         switch (_damageType)
         {

@@ -12,11 +12,12 @@ public class BuffCall : MonoBehaviour
     void Start()
     {
         var towersToBuff = Physics2D.OverlapCircleAll(transform.position,range,hitMask);
-        Debug.Log("hi");
         foreach (var item in towersToBuff)
         {
-            Debug.Log("item");
-            item.GetComponent<TowerBase>().AddBuff(_buffCaller);
+            var towerBase = item.GetComponent<TowerBase>();
+
+            if (towerBase != null)
+                towerBase.StartCoroutine(towerBase.AddBuff(_buffCaller));
         }
 
         Destroy(this.gameObject);

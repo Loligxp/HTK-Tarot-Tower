@@ -9,6 +9,7 @@ public class ScriptableTower : ScriptableObject
     {
         shooter,
         buffTower,
+        AOETower
     }
 
     public string towerName;

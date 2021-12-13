@@ -18,23 +18,42 @@ public class TowerBase : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer > 1 / _myTower.fireRate + _fireRateBuff)
+        if (timer > 1 / _myTower.fireRate + _fireRateBuff)
         {
             ScanForEnemies();
-            if (_enemiesInRange.Count != 0)
+
+            switch (_myTower.towerType)
             {
-                switch (_myTower.towerType)
-                {
-                    case ScriptableTower.TowerTypes.shooter:
+                case ScriptableTower.TowerTypes.shooter:
+                    if (_enemiesInRange.Count != 0)
+                    {
                         BasicShot();
-                        break;
-                    case ScriptableTower.TowerTypes.buffTower:
-                        break;
-                }
-                timer = 0;
+                        timer = 0;
+
+                    }
+
+                    break;
+                case ScriptableTower.TowerTypes.buffTower:
+                    BuffCall();
+                    timer = 0;
+
+                    break;
+                case ScriptableTower.TowerTypes.AOETower:
+                    AOE_Attack();
+                    timer = 0;
+                    break;
             }
         }
     }
+
+    void AOE_Attack()
+    {
+        var bullet = Instantiate(_myTower.projectile, transform.position, Quaternion.identity);
+        var bulletScript = bullet.GetComponent<AOE_Attack>();
+
+        bulletScript.AOE_Range += _myTower.range;
+    }
+
     void BuffCall()
     {
         var bullet = Instantiate(_myTower.projectile, transform.position, Quaternion.identity);
@@ -67,8 +86,11 @@ public class TowerBase : MonoBehaviour
     public IEnumerator AddBuff(ScriptableBuffs newBuff)
     {
         _activeBuffs.Add(newBuff);
+        UpdateBuffs();
         yield return new WaitForSeconds(newBuff.buffLenght);
         _activeBuffs.Remove(newBuff);
+        UpdateBuffs();
+
     }
 
     public void UpdateBuffs()

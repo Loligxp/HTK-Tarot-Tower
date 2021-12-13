@@ -48,4 +48,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   _buffCaller: {fileID: 11400000, guid: 64934b99a97c91f40abf845dcc07516f, type: 2}
-  range: 0
+  range: 2
