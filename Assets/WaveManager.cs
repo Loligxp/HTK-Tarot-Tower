@@ -34,7 +34,8 @@ public class WaveManager : MonoSingleton<WaveManager>
             Debug.Log("You win!");
         }
 
-        FortuneStart();
+        if(FortuneStart != null)
+            FortuneStart();
     }
 
     IEnumerator SendWave(ScriptableWave newWave)
