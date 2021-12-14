@@ -6,5 +6,5 @@ using UnityEngine;
 public class ScriptableBuffs : ScriptableObject
 {
     public string buffName;
-    public float buffLenght, damageBuff, fireRateBuff;
+    public float buffLenght, damageBuff, fireRateBuff, rangeBuff;
 }

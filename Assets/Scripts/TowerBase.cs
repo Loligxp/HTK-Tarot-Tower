@@ -13,12 +13,12 @@ public class TowerBase : MonoBehaviour
     public LayerMask scanMask;
     public List<ScriptableBuffs> _activeBuffs;
 
-    private float _damageBuff, _fireRateBuff;
+    private float _damageBuff, _fireRateBuff, _rangeBuff;
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (timer > 1 / _myTower.fireRate + _fireRateBuff)
+        if (timer > 1 / (_myTower.fireRate + _fireRateBuff))
         {
             ScanForEnemies();
 
@@ -85,7 +85,7 @@ public class TowerBase : MonoBehaviour
 
     void ScanForEnemies()
     {
-        var enemiesFound = Physics2D.OverlapCircleAll(transform.position,_myTower.range, scanMask);
+        var enemiesFound = Physics2D.OverlapCircleAll(transform.position,_myTower.range + _rangeBuff, scanMask);
 
         _enemiesInRange = new List<GameObject>();
 
@@ -109,6 +109,7 @@ public class TowerBase : MonoBehaviour
     {
         _damageBuff = 0;
         _fireRateBuff = 0;
+        _rangeBuff = 0;
 
         for (int i = 0; i < _activeBuffs.Count; i++)
         {
@@ -117,6 +118,9 @@ public class TowerBase : MonoBehaviour
 
             if (_activeBuffs[i].fireRateBuff > _fireRateBuff)
                 _fireRateBuff = _activeBuffs[i].fireRateBuff;
+
+            if (_activeBuffs[i].rangeBuff > _rangeBuff)
+                _rangeBuff = _activeBuffs[i].rangeBuff;
         }
     }
 
@@ -125,6 +129,10 @@ public class TowerBase : MonoBehaviour
         Gizmos.color = new Color(1,0,0,0.2f);
 
         Gizmos.DrawSphere(transform.position,_myTower.range);
+
+        Gizmos.color = new Color(0, 0, 1, 0.2f);
+
+        Gizmos.DrawSphere(transform.position, _myTower.range + _rangeBuff);
     }
 }
 

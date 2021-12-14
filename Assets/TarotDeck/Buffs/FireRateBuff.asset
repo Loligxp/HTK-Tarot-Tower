@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0d259ce707e67c4daea9b626193cfd4, type: 3}
-  m_Name: FireDebuff
+  m_Script: {fileID: 11500000, guid: 695846803b273534db3c778265f2db3e, type: 3}
+  m_Name: FireRateBuff
   m_EditorClassIdentifier: 
-  debuffName: FireDebuff
-  debuffLenght: 1
-  fireDebuff: 1
-  freezeDebuff: 0
+  buffName: FireRateBuff
+  buffLenght: 1
+  damageBuff: 0
+  fireRateBuff: 1

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0d259ce707e67c4daea9b626193cfd4, type: 3}
-  m_Name: FireDebuff
+  m_Name: StrongFire
   m_EditorClassIdentifier: 
-  debuffName: FireDebuff
-  debuffLenght: 1
-  fireDebuff: 1
+  debuffName: StrongFire
+  debuffLenght: 3
+  fireDebuff: 2
   freezeDebuff: 0

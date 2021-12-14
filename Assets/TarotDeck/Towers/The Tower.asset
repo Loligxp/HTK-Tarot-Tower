@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05886e83da7d8504c92ac8fa3c0b9a63, type: 3}
+  m_Name: The Tower
+  m_EditorClassIdentifier: 
+  towerName: The Tower
+  description: See beyond the horizon
+  towerType: 1
+  UI_Sprite: {fileID: 0}
+  tower_Sprite: {fileID: 0}
+  cost: 12
+  damage: 0
+  range: 3
+  fireRate: 1
+  projectile: {fileID: 8409530770709270632, guid: 20d368a10cebb3c40a5dc621f65cea7a, type: 3}
