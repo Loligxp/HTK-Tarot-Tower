@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05886e83da7d8504c92ac8fa3c0b9a63, type: 3}
-  m_Name: Strenght
+  m_Name: The Sun
   m_EditorClassIdentifier: 
-  towerName: Strenght
-  description: Empowers nearby Towers
-  towerType: 1
-  UI_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  towerName: The Sun
+  description: Burns everything around it
+  towerType: 2
+  UI_Sprite: {fileID: 0}
   tower_Sprite: {fileID: 0}
-  cost: 3
-  damage: 0
-  range: 2
-  fireRate: 1
-  projectile: {fileID: 4109638879702467904, guid: a394991d3a7482446819385b3c66d329, type: 3}
+  cost: 7
+  range: 3
+  fireRate: 0.5
+  projectile: {fileID: 8055860792613880194, guid: 36e3baccd916b2e4f97e1ee573400917, type: 3}

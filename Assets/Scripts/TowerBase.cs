@@ -24,7 +24,7 @@ public class TowerBase : MonoBehaviour
 
             switch (_myTower.towerType)
             {
-                case ScriptableTower.TowerTypes.shooter:
+                case ScriptableTower.TowerTypes.Shooter:
                     if (_enemiesInRange.Count != 0)
                     {
                         BasicShot();
@@ -33,7 +33,7 @@ public class TowerBase : MonoBehaviour
                     }
 
                     break;
-                case ScriptableTower.TowerTypes.buffTower:
+                case ScriptableTower.TowerTypes.BuffTower:
                     BuffCall();
                     timer = 0;
 
@@ -42,8 +42,20 @@ public class TowerBase : MonoBehaviour
                     AOE_Attack();
                     timer = 0;
                     break;
+                case ScriptableTower.TowerTypes.HitScan:
+                    if (_enemiesInRange.Count != 0)
+                    {
+                        HitScan_Attack();
+                        timer = 0;
+                    }
+                    break;
             }
         }
+    }
+
+    void HitScan_Attack()
+    {
+        _enemiesInRange[0].GetComponent<EnemyBase>().TakeDamage(_myTower.damage);
     }
 
     void AOE_Attack()

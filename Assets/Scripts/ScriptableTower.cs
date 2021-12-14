@@ -7,9 +7,10 @@ public class ScriptableTower : ScriptableObject
 {
     public enum TowerTypes
     {
-        shooter,
-        buffTower,
-        AOETower
+        Shooter,
+        BuffTower,
+        AOETower,
+        HitScan
     }
 
     public string towerName;
@@ -21,6 +22,6 @@ public class ScriptableTower : ScriptableObject
     public int cost;
 
     //Stats
-    public float  range, fireRate;
+    public float damage, range, fireRate;
     public GameObject projectile;
 }

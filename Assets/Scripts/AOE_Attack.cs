@@ -21,7 +21,7 @@ public class AOE_Attack : MonoBehaviour
                 StartCoroutine(ENM.AddDebuff(_debuffAttack));
             }
             else
-                enemy.GetComponent<EnemyBase>().TakeDamge(AOE_Damage, Projectile.DamageTypes.Normal);
+                enemy.GetComponent<EnemyBase>().TakeDamage(AOE_Damage);
 
         }
         Destroy(this.gameObject, 3);
