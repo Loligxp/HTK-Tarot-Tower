@@ -13,6 +13,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     public LayerMask buildMask;
     public float buildSize;
     public GameObject buildPreview;
+    public GameObject LastValidBuildPosObject;
     public SpriteRenderer buildPreviewSPR;
 
     private bool canBuild;
@@ -34,10 +35,14 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             {
                 canBuild = true;
                 buildPreviewSPR.color = new Color(0,1,0,0.2f);
+                LastValidBuildPosObject.transform.position = mousePos;
+                LastValidBuildPosObject.transform.localScale = Vector3.one * buildSize;
+
+
             }
             else
             {
-                canBuild = false;
+                //canBuild = false;
                 buildPreviewSPR.color = new Color(1, 0, 0, 0.2f);
             }
 
@@ -54,6 +59,8 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             {
                 //not enough Money
                 buildModeActive = false;
+                canBuild = false;
+
             }
             else
             {
@@ -62,7 +69,8 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
                 var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePos.z = 0;
 
-                var newTower = Instantiate(GameManager.Instance.towerObjectList[towerID_Active], mousePos, Quaternion.identity);
+                var newTower = Instantiate(GameManager.Instance.towerObjectList[towerID_Active], LastValidBuildPosObject.transform.position, Quaternion.identity);
+                canBuild = false;
                 buildModeActive = false;
             }
         }

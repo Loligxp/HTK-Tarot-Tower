@@ -45,3 +45,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
+  Life: 200
+  scriptableTowerList:
+  - {fileID: 11400000, guid: 58f074617e53f6e49ab3f21b4d381e44, type: 2}
+  - {fileID: 11400000, guid: 4892a2871ea06fa40b36e7c5885bcca5, type: 2}
+  - {fileID: 11400000, guid: c02c092dedcae3d4b8dddf6dad91e83f, type: 2}
+  - {fileID: 11400000, guid: 2c1d9b996b8c5284883425c69ef6e0bb, type: 2}
+  - {fileID: 11400000, guid: 956e0e86b1385084ca6d3c9b254f1ce8, type: 2}
+  - {fileID: 11400000, guid: fd72375a02b180641b7e3e7f51f02e36, type: 2}
+  - {fileID: 11400000, guid: 31ae189153c7c2a46b3e108cc2da1661, type: 2}
+  - {fileID: 11400000, guid: 2786a8ed1e608e945bb5f7d4bc55b99a, type: 2}
+  - {fileID: 11400000, guid: 195f9be78a5d78243aeb9efb2750ba81, type: 2}
+  - {fileID: 11400000, guid: 1c366ca5ad15041499117e832d939b4a, type: 2}
+  - {fileID: 11400000, guid: 13ce91c1af3a6674e8cd0094f01048d7, type: 2}
+  - {fileID: 11400000, guid: e375be1acffa4594c851ade8cfa9a11d, type: 2}
+  - {fileID: 11400000, guid: cb525f496784a594d8e4586ea1421fae, type: 2}
+  - {fileID: 11400000, guid: 3c0242e507553f74eab3ea9871512905, type: 2}
+  towerObjectList:
+  - {fileID: 5124249858239222355, guid: 41ac74b191641fe478ff8b3f67069ff2, type: 3}
+  - {fileID: 6946798805763634782, guid: fe4e6c143adcb584d9b2eb34177f6415, type: 3}
+  - {fileID: 1827169141366836339, guid: 7d55fa474adacde46b7d193ecb3d0edc, type: 3}
+  - {fileID: 1459963936868571546, guid: 07a73c9c0175a5d4f9cee8b49595e454, type: 3}
+  - {fileID: 7587388264500734139, guid: 97ddef1c4b969734da857b27066d2fd2, type: 3}
+  - {fileID: 7779343747794685610, guid: bdcd135f9d5a9b246b8ca358c54075f7, type: 3}
+  - {fileID: 2417753755246806880, guid: 4177ed4eaaace204bbeb3c1c69eac3fc, type: 3}
+  - {fileID: 6751778646035125977, guid: 45e09907331a4b247aa53d92cbdb65fc, type: 3}
+  - {fileID: 4734193019313943904, guid: efd78462805b4ba4cbdc4d3640cbafc1, type: 3}
+  - {fileID: 6793408623498736930, guid: 2fd1f89313b375e469af253ed92e266e, type: 3}
+  - {fileID: 2828839040414559093, guid: 380c85511466f494aa41298fb2c3b86a, type: 3}
+  - {fileID: 8969466979813985704, guid: c06bdb7f382695f46aeb46d76aa38fa2, type: 3}
+  - {fileID: 4096534649206820066, guid: 775db9fd9d2a1b84ba0637cac5e5aaec, type: 3}
+  - {fileID: 8586651571435166903, guid: ba5803d258a2b0a478cacc6a3561e8f9, type: 3}
