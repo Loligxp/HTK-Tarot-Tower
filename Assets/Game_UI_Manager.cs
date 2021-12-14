@@ -58,7 +58,6 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             else
             {
                 GameManager.Instance.money -= GameManager.Instance.scriptableTowerList[towerID_Active].cost;
-                Debug.Log("Building tower " + towerID_Active + " at " + Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
                 var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePos.z = 0;

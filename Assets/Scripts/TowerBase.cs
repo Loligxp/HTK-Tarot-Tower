@@ -15,6 +15,20 @@ public class TowerBase : MonoBehaviour
 
     private float _damageBuff, _fireRateBuff, _rangeBuff;
 
+    private void Start()
+    {
+        if (_myTower.towerType == ScriptableTower.TowerTypes.WheelOfFortune)
+            WaveManager.Instance.FortuneStart += WheelOfFortuneSpin;
+    }
+
+    public void Sell()
+    {
+        if (_myTower.towerType == ScriptableTower.TowerTypes.WheelOfFortune)
+            WaveManager.Instance.FortuneStart -= WheelOfFortuneSpin;
+
+        Destroy(this.gameObject);
+    }
+
     void Update()
     {
         timer += Time.deltaTime;
@@ -57,8 +71,20 @@ public class TowerBase : MonoBehaviour
                     }
                     timer = 0;
                     break;
+                case ScriptableTower.TowerTypes.Rolando:
+                    if (_enemiesInRange.Count != 0)
+                    {
+                        HitScan_Attack();
+                        timer = 0;
+                    }
+                    break;
             }
         }
+    }
+
+    void WheelOfFortuneSpin()
+    {
+        GameManager.Instance.AddCoins(Random.Range(0,11));
     }
 
     void HitScan_Attack()
@@ -93,7 +119,7 @@ public class TowerBase : MonoBehaviour
 
     void ScanForEnemies()
     {
-        var enemiesFound = Physics2D.OverlapCircleAll(transform.position,_myTower.range + _rangeBuff, scanMask);
+        var enemiesFound = Physics2D.OverlapCircleAll(transform.position,(_myTower.range + _rangeBuff) /2, scanMask);
 
         _enemiesInRange = new List<GameObject>();
 
