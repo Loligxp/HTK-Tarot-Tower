@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05886e83da7d8504c92ac8fa3c0b9a63, type: 3}
   m_Name: The High Pristess
   m_EditorClassIdentifier: 
-  towerName: The High Pristess
+  towerName: High Priestess
   description: Reveal your Enemy
   towerType: 4
-  UI_Sprite: {fileID: 0}
+  UI_Sprite: {fileID: 21300000, guid: e1de21ed1f72efd45b37ca64910395d6, type: 3}
   tower_Sprite: {fileID: 0}
   cost: 4
   damage: 0

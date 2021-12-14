@@ -11,7 +11,10 @@ public class WaveManager : MonoSingleton<WaveManager>
 
     private List<ScriptableWave> currentActiveWave = new List<ScriptableWave>();
 
-    private int currentWave;
+    public int currentWave;
+    public delegate void WheelOfFortuneCall();
+    public WheelOfFortuneCall FortuneStart;
+
 
     private void Update()
     {
@@ -30,6 +33,8 @@ public class WaveManager : MonoSingleton<WaveManager>
         {
             Debug.Log("You win!");
         }
+
+        FortuneStart();
     }
 
     IEnumerator SendWave(ScriptableWave newWave)

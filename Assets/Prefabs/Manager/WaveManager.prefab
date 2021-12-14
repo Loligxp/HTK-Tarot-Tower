@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startPoint: {fileID: 0}
-  _spawnsPerSecond: 1
-  _timer: 0
-  _enemy: {fileID: 2661647817376065375, guid: 3449e30042a15734091be5127991b422, type: 3}
+  Waves:
+  - {fileID: 11400000, guid: 91ed587b334a0464fa8127d9d6c4aac9, type: 2}
+  - {fileID: 11400000, guid: e172e478a3c30f44093e6d9398f0df3a, type: 2}
+  - {fileID: 11400000, guid: cffddd0efcb1dbe45b87f8a67a813352, type: 2}
+  - {fileID: 11400000, guid: 55f1ff649bef614478a84728af54872f, type: 2}
+  currentWave: 0

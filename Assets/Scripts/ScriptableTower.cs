@@ -11,7 +11,9 @@ public class ScriptableTower : ScriptableObject
         BuffTower,
         AOETower,
         HitScan,
-        Decloack
+        Decloack,
+        WheelOfFortune,
+        Rolando
     }
 
     public string towerName;

@@ -11,7 +11,7 @@ public class AOE_Attack : MonoBehaviour
     public LayerMask AOE_Mask;
     void Start()
     {
-        var enemiesInAOE = Physics2D.OverlapCircleAll(transform.position,AOE_Range, AOE_Mask);
+        var enemiesInAOE = Physics2D.OverlapCircleAll(transform.position,AOE_Range / 2, AOE_Mask);
 
         foreach (var enemy in enemiesInAOE)
         {

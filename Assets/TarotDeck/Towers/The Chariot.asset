@@ -15,7 +15,7 @@ MonoBehaviour:
   towerName: The Chariot
   description: Speed up nearby Towers
   towerType: 1
-  UI_Sprite: {fileID: 0}
+  UI_Sprite: {fileID: 21300000, guid: 0752e79ad2d4bcf4c8464e0ac18e7130, type: 3}
   tower_Sprite: {fileID: 0}
   cost: 7
   damage: 0

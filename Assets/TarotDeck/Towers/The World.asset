@@ -15,7 +15,7 @@ MonoBehaviour:
   towerName: The World
   description: See beyond the horizon
   towerType: 1
-  UI_Sprite: {fileID: 0}
+  UI_Sprite: {fileID: 21300000, guid: 574d85538ff0b864c8ff3688be2b10e3, type: 3}
   tower_Sprite: {fileID: 0}
   cost: 12
   damage: 0
