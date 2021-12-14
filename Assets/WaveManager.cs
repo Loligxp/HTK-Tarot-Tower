@@ -11,7 +11,7 @@ public class WaveManager : MonoSingleton<WaveManager>
 
     private List<ScriptableWave> currentActiveWave = new List<ScriptableWave>();
 
-    private int currentWave;
+    public int currentWave;
 
     private void Update()
     {

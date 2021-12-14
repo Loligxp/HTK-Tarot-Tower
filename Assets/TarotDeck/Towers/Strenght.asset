@@ -15,7 +15,7 @@ MonoBehaviour:
   towerName: Strenght
   description: Empowers nearby Towers
   towerType: 1
-  UI_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  UI_Sprite: {fileID: 21300000, guid: 6fa56d786a14092449e6f235f4d8cd1a, type: 3}
   tower_Sprite: {fileID: 0}
   cost: 3
   damage: 0

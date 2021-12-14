@@ -20,7 +20,7 @@ public class EnemyBase : MonoBehaviour
     private float _movementSpeed, _health;
 
     [SerializeField]
-    private int _worth;
+    private int _worth, _damage;
 
     [SerializeField]
     private Vector3 _goalPosition = Vector3.up;
@@ -41,7 +41,7 @@ public class EnemyBase : MonoBehaviour
 
         if(_goalPosition == Vector3.zero)
         {
-            Debug.Log("Enemy Reached end -1HP");
+            GameManager.Instance.RemoveLife(_damage);
             Destroy(this.gameObject);
         }
 

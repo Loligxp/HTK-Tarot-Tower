@@ -14,6 +14,7 @@ public class TowerBase : MonoBehaviour
     public List<ScriptableBuffs> _activeBuffs;
 
     private float _damageBuff, _fireRateBuff, _rangeBuff;
+
     void Update()
     {
         timer += Time.deltaTime;

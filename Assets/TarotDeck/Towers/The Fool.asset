@@ -15,7 +15,7 @@ MonoBehaviour:
   towerName: The Fool
   description: Basic tower
   towerType: 0
-  UI_Sprite: {fileID: 21300000, guid: f29004095d5012749b31c63b8304fe92, type: 3}
+  UI_Sprite: {fileID: 21300000, guid: 63d6f327a5a03d442ab6c24639184091, type: 3}
   tower_Sprite: {fileID: 21300000, guid: f29004095d5012749b31c63b8304fe92, type: 3}
   cost: 5
   damage: 0
