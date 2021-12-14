@@ -49,6 +49,13 @@ public class TowerBase : MonoBehaviour
                         timer = 0;
                     }
                     break;
+                case ScriptableTower.TowerTypes.Decloack:
+                    foreach (var item in _enemiesInRange)
+                    {
+                        item.layer = 6;
+                    }
+                    timer = 0;
+                    break;
             }
         }
     }
