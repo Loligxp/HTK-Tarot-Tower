@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0d259ce707e67c4daea9b626193cfd4, type: 3}
-  m_Name: FireDebuff
+  m_Script: {fileID: 11500000, guid: 9ebe4eca3dac67f4aa46923b9ec9d805, type: 3}
+  m_Name: Camo Wave 1
   m_EditorClassIdentifier: 
-  debuffName: FireDebuff
-  debuffLenght: 1
-  fireDebuff: 1
-  freezeDebuff: 0
+  enemy: {fileID: 7525877288813776077, guid: 4c2e81a3417bc5244b0d28a400161977, type: 3}
+  spawnCount: 5
+  spawnInterval: 2

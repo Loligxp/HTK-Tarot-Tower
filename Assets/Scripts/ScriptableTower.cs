@@ -10,7 +10,8 @@ public class ScriptableTower : ScriptableObject
         Shooter,
         BuffTower,
         AOETower,
-        HitScan
+        HitScan,
+        Decloack
     }
 
     public string towerName;

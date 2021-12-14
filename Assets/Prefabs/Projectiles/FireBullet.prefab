@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debuffBullet: 1
-  debuffEffect: {fileID: 11400000, guid: 5cb27a98d5e98304995e5700a8b28cdd, type: 2}
+  debuffEffect: {fileID: 11400000, guid: 9f91783bfdf234f4aa72ce4508317462, type: 2}
   speed: 6
   damage: 1
   piercing: 0

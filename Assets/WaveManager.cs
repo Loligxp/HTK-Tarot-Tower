@@ -7,18 +7,43 @@ public class WaveManager : MonoSingleton<WaveManager>
     [SerializeField]
     Transform _startPoint;
 
-    [SerializeField]
-    float _spawnsPerSecond, _timer;
+    public List<ScriptableWave> Waves = new List<ScriptableWave>();
 
-    public GameObject _enemy;
-    void Update()
+    private List<ScriptableWave> currentActiveWave = new List<ScriptableWave>();
+
+    private int currentWave;
+
+    private void Update()
     {
-        _timer += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Space))
+            startWave();
+    }
 
-        if(_timer > 1 / _spawnsPerSecond)
+    public void startWave()
+    {
+        if (Waves.Count > currentWave)
         {
-            Instantiate(_enemy,_startPoint.position,Quaternion.identity);
-            _timer = 0;
+            StartCoroutine(SendWave(Waves[currentWave]));
+            currentWave++;
         }
+        else
+        {
+            Debug.Log("You win!");
+        }
+    }
+
+    IEnumerator SendWave(ScriptableWave newWave)
+    {
+        int enemiesSpawned = 0;
+        currentActiveWave.Add(newWave);
+
+        while (enemiesSpawned < newWave.spawnCount)
+        {
+            Instantiate(newWave.enemy, _startPoint.position,Quaternion.identity);
+            enemiesSpawned++;
+            yield return new WaitForSeconds(newWave.spawnInterval);
+        }
+
+        currentActiveWave.Remove(newWave);
     }
 }
