@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public enum DamageTypes
-    {
-        Normal,
-        Fire,
-        Ice
-    }
-    public DamageTypes _bulletType;
+    public bool debuffBullet;
+    public ScriptableDebuffs debuffEffect;
 
     [SerializeField]
     public float speed, damage;
@@ -29,7 +24,11 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<EnemyBase>().TakeDamge(damage, _bulletType);
+            if(!debuffBullet)
+                collision.GetComponent<EnemyBase>().TakeDamage(damage);
+            else
+                collision.GetComponent<EnemyBase>().TakeDamage(damage, debuffEffect);
+
             piercing--;
 
             if(piercing < 0)

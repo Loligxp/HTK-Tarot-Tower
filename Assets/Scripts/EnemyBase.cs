@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
+    public enum EnemyTypes
+    {
+        Normal,
+        Camo,
+        Regen,
+        FreezeRes,
+        FireRes
+    }
+
+    public EnemyTypes myEnemyType;
+
     //Stats
     [SerializeField]
     private float _movementSpeed, _health;
@@ -19,9 +30,14 @@ public class EnemyBase : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position,_goalPosition,Time.deltaTime * Mathf.Clamp(_movementSpeed - freezeStrenght,0,99));
-        if (burnStrenght > 0)
-            TakeDamge(burnStrenght * Time.deltaTime,Projectile.DamageTypes.Normal);
+        if(myEnemyType != EnemyTypes.FreezeRes)
+            transform.position = Vector2.MoveTowards(transform.position,_goalPosition,Time.deltaTime * Mathf.Clamp(_movementSpeed - freezeStrenght,0,99));
+        else
+            transform.position = Vector2.MoveTowards(transform.position, _goalPosition, Time.deltaTime * Mathf.Clamp(_movementSpeed, 0, 99));
+
+        if(myEnemyType != EnemyTypes.FireRes)
+            if (burnStrenght > 0)
+                TakeDamage(burnStrenght * Time.deltaTime);
 
         if(_goalPosition == Vector3.zero)
         {
@@ -40,9 +56,7 @@ public class EnemyBase : MonoBehaviour
     {
         _activeDebuffs.Add(newBuff);
         UpdateBuffs();
-        Debug.Log("atach " + newBuff.debuffLenght);
         yield return new WaitForSeconds(newBuff.debuffLenght);
-        Debug.Log("deTach");
         _activeDebuffs.Remove(newBuff);
         UpdateBuffs();
 
@@ -71,17 +85,15 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    public void TakeDamge(float damage, Projectile.DamageTypes _damageType) //_damageType Might be unnecesarry; Remove later 
+    public void TakeDamage(float damage)
     {
-        switch (_damageType)
-        {
-            case Projectile.DamageTypes.Normal:
-                _health -= damage;
-                break;
-            case Projectile.DamageTypes.Fire:
-                break;
-            case Projectile.DamageTypes.Ice:
-                break;
-        }
+        _health -= damage;
+    }
+
+    public void TakeDamage(float damage, ScriptableDebuffs newDebuff)
+    {
+        _health -= damage;
+
+        StartCoroutine(AddDebuff(newDebuff));
     }
 }
