@@ -17,7 +17,7 @@ MonoBehaviour:
   towerType: 0
   UI_Sprite: {fileID: 21300000, guid: c0627f70593464a459abe6c965a5b55c, type: 3}
   tower_Sprite: {fileID: 1716808714, guid: 27305c4d9833c654ba70f04fe452abf2, type: 3}
-  cost: 7
+  cost: 500
   damage: 1
   range: 3
   fireRate: 1

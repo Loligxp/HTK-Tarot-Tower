@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2661647817376065378}
   - component: {fileID: 2661647817376065379}
   m_Layer: 6
-  m_Name: BasicEnemy
+  m_Name: Icy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,11 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1105bcefd404fa4ebdd77136ba0a7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myEnemyType: 0
-  _movementSpeed: 1.5
-  _health: 3
-  _worth: 1
-  _damage: 1
+  myEnemyType: 3
+  _movementSpeed: 2
+  _health: 4
+  _worth: 10
+  _damage: 5
   _goalPosition: {fileID: 0}
   _activeDebuffs: []
   burnStrenght: 0
@@ -98,7 +98,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 2119722470, guid: f9d7ef39c20aec54998af61a60087d32, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
