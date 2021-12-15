@@ -69,7 +69,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
                 var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePos.z = 0;
 
-                var newTower = Instantiate(GameManager.Instance.towerObjectList[towerID_Active], LastValidBuildPosObject.transform.position, Quaternion.identity);
+                var newTower = Instantiate(GameManager.Instance.towerObjectList[towerID_Active], LastValidBuildPosObject.transform.position + Vector3.up * 0.4f, Quaternion.identity);
                 canBuild = false;
                 buildModeActive = false;
             }
