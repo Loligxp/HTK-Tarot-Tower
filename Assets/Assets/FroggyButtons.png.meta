@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e5c584a6990193499161aa613e7d11c
-      internalID: -31179754
+      spriteID: 780a31a9674a36245b60519865229f19
+      internalID: 1202958874
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f2a9505071a18b468150514ca6fc893
-      internalID: -427487089
+      spriteID: eba28b0c3a865bb4a901f6e7d552ae62
+      internalID: 573668674
       vertices: []
       indices: 
       edges: []
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4dc6289041b86e4ebb1fd5c42932146
-      internalID: 2024045326
+      spriteID: 136acc10efd599a40b51000c5d00cd88
+      internalID: 1232587902
       vertices: []
       indices: 
       edges: []
@@ -202,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c00a8092c54dbb1418609c7ffa03d183
-      internalID: 1446031714
+      spriteID: 6b3cf60c8a17ff44b93b2c99b0ac2104
+      internalID: 4717770
       vertices: []
       indices: 
       edges: []
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 653236623d42f6a458838d7a01157400
-      internalID: 1702250284
+      spriteID: 667d016f96d52ee4588f65c0a7fafd8f
+      internalID: 41162876
       vertices: []
       indices: 
       edges: []
@@ -240,11 +240,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FroggyButtons_3: 2024045326
-      FroggyButtons_2: -427487089
-      FroggyButtons_4: 1446031714
-      FroggyButtons_5: 1702250284
-      FroggyButtons_1: -31179754
+      FroggyButtons_3: 1232587902
+      FroggyButtons_2: 573668674
+      FroggyButtons_4: 4717770
+      FroggyButtons_5: 41162876
+      FroggyButtons_1: 1202958874
       FroggyButtons_0: -1146857132
   spritePackingTag: 
   pSDRemoveMatte: 0
