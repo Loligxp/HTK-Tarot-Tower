@@ -6,6 +6,6 @@ using UnityEngine;
 public class ScriptableWave : ScriptableObject
 {
     public GameObject enemy;
-    public int spawnCount;
-    public float spawnInterval;
+    public int easyEnemies;
+    public float easyInterval;
 }
