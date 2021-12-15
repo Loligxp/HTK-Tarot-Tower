@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
     private int piercing;
 
     public Vector2 _direction;
-
+    private bool hastHit = false;
     private void Update()
     {
         transform.Translate(_direction * speed * Time.deltaTime);
@@ -22,8 +22,9 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") && !hastHit)
         {
+            hastHit = true;
             if(!debuffBullet)
                 collision.GetComponent<EnemyBase>().TakeDamage(damage);
             else
