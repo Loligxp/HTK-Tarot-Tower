@@ -46,10 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c775fee4d69744f83fdbc0c6cfd5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletType: 0
+  debuffBullet: 0
+  debuffEffect: {fileID: 0}
   speed: 2
   damage: 1
-  piercing: 1
+  piercing: 3
   _direction: {x: 0, y: 0}
 --- !u!58 &637272268
 CircleCollider2D:

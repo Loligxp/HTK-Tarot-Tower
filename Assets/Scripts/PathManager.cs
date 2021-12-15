@@ -17,7 +17,12 @@ public class PathManager : MonoSingleton<PathManager>
         
     }
 
-    public Vector3 GetNextNodePosition(GameObject currentNode)
+    public GameObject GetStartPosition()
+    {
+        return _pathList[0];
+    }
+
+    public GameObject GetNextNodePosition(GameObject currentNode)
     {
 
         for (int i = 0; i < _pathList.Length; i++)
@@ -26,17 +31,17 @@ public class PathManager : MonoSingleton<PathManager>
             {
                 if(i + 1 == _pathList.Length)
                 {
-                    return new Vector3(0,0,0); // 0,0,0 == DeathVector
+                    return null; // 0,0,0 == DeathVector
                 }
                 else
                 {
-                    return _pathList[i + 1].transform.position;
+                    return _pathList[i + 1];
                 }
             }
         }
 
         Debug.LogError("No valid nextNode found; check code",this);
-        return new Vector3(0,0,0); // DeathVector
+        return null; // DeathVector
     }
 
     private void OnDrawGizmos()

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7779343747794685611}
   - component: {fileID: 7779343747794685613}
   - component: {fileID: 5051921542975522279}
+  - component: {fileID: -7556614989586573533}
   m_Layer: 9
   m_Name: The High Pristess
   m_TagString: Untagged
@@ -90,8 +91,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 788143399
+  m_SortingLayer: 1
   m_SortingOrder: 4
   m_Sprite: {fileID: 934187879, guid: 507c9a1f57034a04b97bc78f9ecf0b90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5951914}
   m_EdgeRadius: 0
+--- !u!114 &-7556614989586573533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7779343747794685610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1827169141366836338}
   - component: {fileID: 1827169141366836340}
   - component: {fileID: 3797282891264657214}
+  - component: {fileID: -2107114814097427855}
   m_Layer: 9
   m_Name: The Chariot
   m_TagString: Untagged
@@ -90,8 +91,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 788143399
+  m_SortingLayer: 1
   m_SortingOrder: 4
   m_Sprite: {fileID: 425073656, guid: fde3b54663cff6e489a6c39876b7350f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.46280152}
   m_EdgeRadius: 0
+--- !u!114 &-2107114814097427855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827169141366836339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

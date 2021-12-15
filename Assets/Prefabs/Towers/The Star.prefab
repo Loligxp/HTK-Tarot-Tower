@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6793408623498736931}
   - component: {fileID: 6793408623498736933}
   - component: {fileID: 8335821146351074927}
+  - component: {fileID: 1978886186649631328}
   m_Layer: 7
   m_Name: The Star
   m_TagString: Untagged
@@ -90,8 +91,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 788143399
+  m_SortingLayer: 1
   m_SortingOrder: 4
   m_Sprite: {fileID: -1271680997, guid: d714ab2b791c8e040850f4964fa9da98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.58979654}
   m_EdgeRadius: 0
+--- !u!114 &1978886186649631328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6793408623498736930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

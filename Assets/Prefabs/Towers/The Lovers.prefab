@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2417753755246806881}
   - component: {fileID: 3319395274275149012}
   - component: {fileID: 718942284953922950}
+  - component: {fileID: -2363200527943922230}
   m_Layer: 7
   m_Name: The Lovers
   m_TagString: Untagged
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 788143399
+  m_SortingLayer: 1
   m_SortingOrder: 8
   m_Sprite: {fileID: -911026546, guid: 96c3a59d2d6690947aab80ba1d557c30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -113,6 +114,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5677404, y: 0.6363708}
   m_EdgeRadius: 0
+--- !u!114 &-2363200527943922230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2417753755246806880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2417753755648246009
 PrefabInstance:
   m_ObjectHideFlags: 0

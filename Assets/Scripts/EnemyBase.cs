@@ -23,32 +23,44 @@ public class EnemyBase : MonoBehaviour
     private int _worth, _damage;
 
     [SerializeField]
-    private Vector3 _goalPosition = Vector3.up;
+    private GameObject _goalPosition = null;
     public List<ScriptableDebuffs> _activeDebuffs;
     public float burnStrenght, freezeStrenght;
 
-
+    private void Start()
+    {
+            _goalPosition = PathManager.Instance.GetStartPosition();
+    }
     void Update()
     {
-        if(myEnemyType != EnemyTypes.FreezeRes)
-            transform.position = Vector2.MoveTowards(transform.position,_goalPosition,Time.deltaTime * Mathf.Clamp(_movementSpeed - freezeStrenght,0,99));
-        else
-            transform.position = Vector2.MoveTowards(transform.position, _goalPosition, Time.deltaTime * Mathf.Clamp(_movementSpeed, 0, 99));
-
-        if(myEnemyType != EnemyTypes.FireRes)
-            if (burnStrenght > 0)
-                TakeDamage(burnStrenght * Time.deltaTime);
-
-        if(_goalPosition == Vector3.zero)
+        if (_goalPosition == null)
         {
             GameManager.Instance.RemoveLife(_damage);
             Destroy(this.gameObject);
         }
 
+        if (myEnemyType != EnemyTypes.FreezeRes)
+            transform.position = Vector2.MoveTowards(transform.position,_goalPosition.transform.position,Time.deltaTime * Mathf.Clamp(_movementSpeed - freezeStrenght,0,99));
+        else
+            transform.position = Vector2.MoveTowards(transform.position, _goalPosition.transform.position, Time.deltaTime * Mathf.Clamp(_movementSpeed, 0, 99));
+
+        transform.up = transform.position - _goalPosition.transform.position;
+
+        if(myEnemyType != EnemyTypes.FireRes)
+            if (burnStrenght > 0)
+                TakeDamage(burnStrenght * Time.deltaTime);
+
+       
+
         if(_health <= 0)
         {
             GameManager.Instance.AddCoins(_worth);
             Destroy(this.gameObject);
+        }
+
+        if( Vector2.Distance(transform.position, _goalPosition.transform.position) < 0.1f)
+        {
+            _goalPosition = PathManager.Instance.GetNextNodePosition(_goalPosition);
         }
     }
     
@@ -77,13 +89,6 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("PathNode"))
-        {
-            _goalPosition = PathManager.Instance.GetNextNodePosition(collision.gameObject);
-        }
-    }
 
     public void TakeDamage(float damage)
     {

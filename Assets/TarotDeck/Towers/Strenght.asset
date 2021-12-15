@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Strenght
   m_EditorClassIdentifier: 
   towerName: Strenght
-  description: Empowers nearby Towers
+  description: Buffs the damage dealt by Froggies in range
   towerType: 1
   UI_Sprite: {fileID: 21300000, guid: 6fa56d786a14092449e6f235f4d8cd1a, type: 3}
-  tower_Sprite: {fileID: 0}
+  tower_Sprite: {fileID: -1621649891, guid: 00057cd5ce27b684e81ebccec6bc4b85, type: 3}
   cost: 3
   damage: 0
   range: 2

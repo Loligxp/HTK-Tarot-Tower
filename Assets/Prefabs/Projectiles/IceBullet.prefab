@@ -49,7 +49,7 @@ MonoBehaviour:
   debuffBullet: 1
   debuffEffect: {fileID: 11400000, guid: dea250d67c59de942bb7654798f0b257, type: 2}
   speed: 10
-  damage: 1
+  damage: 0
   piercing: 0
   _direction: {x: 0, y: 0}
 --- !u!58 &5457505501508697542

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6751778646035125976}
   - component: {fileID: 6751778646035125982}
   - component: {fileID: 8096032781181361556}
+  - component: {fileID: -5827121211326937637}
   m_Layer: 7
   m_Name: The Magician
   m_TagString: Untagged
@@ -90,8 +91,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 788143399
+  m_SortingLayer: 1
   m_SortingOrder: 4
   m_Sprite: {fileID: 1450035945, guid: fa3ff0649d386d3409663dfbce6f811f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.6138339}
   m_EdgeRadius: 0
+--- !u!114 &-5827121211326937637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6751778646035125977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -162,11 +162,11 @@ public class TowerBase : MonoBehaviour
     {
         Gizmos.color = new Color(1,0,0,0.2f);
 
-        Gizmos.DrawSphere(transform.position,_myTower.range);
+        Gizmos.DrawSphere(transform.position,_myTower.range / 2);
 
         Gizmos.color = new Color(0, 0, 1, 0.2f);
 
-        Gizmos.DrawSphere(transform.position, _myTower.range + _rangeBuff);
+        Gizmos.DrawSphere(transform.position,(_myTower.range + _rangeBuff) / 2);
     }
 }
 

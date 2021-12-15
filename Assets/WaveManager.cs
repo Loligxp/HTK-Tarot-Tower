@@ -18,8 +18,8 @@ public class WaveManager : MonoSingleton<WaveManager>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            startWave();
+        //if (Input.GetKeyDown(KeyCode.Space))
+         //   startWave();
     }
 
     public void startWave()
