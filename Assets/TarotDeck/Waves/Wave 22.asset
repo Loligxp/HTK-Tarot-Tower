@@ -10,17 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ebe4eca3dac67f4aa46923b9ec9d805, type: 3}
-  m_Name: Wave 1
+  m_Name: Wave 22
   m_EditorClassIdentifier: 
-  easyEnemies: 25
-  easyInterval: 1
-  MediumEnemies: 0
-  MediumInterval: 0
-  StrongEnemies: 0
-  StrongInterval: 0
-  CamoEnemies: 0
-  CamoInterval: 0
-  FrostEnemies: 0
-  FrostInterval: 0
-  FireEnemies: 0
-  FireInterval: 0
+  enemy: {fileID: 7525877288813776077, guid: 4c2e81a3417bc5244b0d28a400161977, type: 3}
+  spawnCount: 50
+  spawnInterval: 0.5

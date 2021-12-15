@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebe4eca3dac67f4aa46923b9ec9d805, type: 3}
   m_Name: Wave 4
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2661647817376065375, guid: 3449e30042a15734091be5127991b422, type: 3}
-  spawnCount: 20
-  spawnInterval: 0.2
+  easyEnemies: 30
+  easyInterval: 1
+  MediumEnemies: 10
+  MediumInterval: 1
+  StrongEnemies: 0
+  StrongInterval: 0
+  CamoEnemies: 0
+  CamoInterval: 0
+  FrostEnemies: 0
+  FrostInterval: 0
+  FireEnemies: 0
+  FireInterval: 0

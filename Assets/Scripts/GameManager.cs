@@ -12,7 +12,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Start()
     {
-        money = 100;
+        money = 400;
     }
 
     public void AddCoins(int amount)
