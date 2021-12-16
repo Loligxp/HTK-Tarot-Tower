@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffName: Strenght
   buffLenght: 2
-  damageBuff: 1
+  damageBuff: 1.5
   fireRateBuff: 0
+  rangeBuff: 0

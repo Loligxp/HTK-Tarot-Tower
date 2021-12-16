@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The Moon
   m_EditorClassIdentifier: 
   towerName: The Moon
-  description: 'Slows Fishies in range '
+  description: ' An elemental Froggy that slows Fishies in range'
   towerType: 2
   UI_Sprite: {fileID: 21300000, guid: 751e67445a8663440ac76370db2b2149, type: 3}
   tower_Sprite: {fileID: -2135919727, guid: 97e0610926c868c40b3715ebe5f86334, type: 3}

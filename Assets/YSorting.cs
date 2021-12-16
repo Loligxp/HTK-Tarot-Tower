@@ -6,6 +6,6 @@ public class YSorting : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(-transform.position.y * 10);
+        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
     }
 }

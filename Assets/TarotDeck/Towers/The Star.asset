@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The Star
   m_EditorClassIdentifier: 
   towerName: The Star
-  description: Shoots ice projectiles that freeze Fishies, deals no damage in return
+  description: An elemental Froggy that shoots ice projectiles freezing Fishies
   towerType: 0
   UI_Sprite: {fileID: 21300000, guid: 8dbe008e5182d544baffced3009d3aaf, type: 3}
   tower_Sprite: {fileID: -1271680997, guid: d714ab2b791c8e040850f4964fa9da98, type: 3}
