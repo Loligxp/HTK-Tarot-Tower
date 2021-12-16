@@ -15,4 +15,4 @@ MonoBehaviour:
   debuffName: Freeze
   debuffLenght: 2
   fireDebuff: 0
-  freezeDebuff: 1
+  freezeDebuff: 2

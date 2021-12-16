@@ -15,4 +15,4 @@ MonoBehaviour:
   debuffName: StrongFreeze
   debuffLenght: 1
   fireDebuff: 0
-  freezeDebuff: 5
+  freezeDebuff: 100

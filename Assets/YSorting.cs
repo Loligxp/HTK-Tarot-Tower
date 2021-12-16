@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class YSorting : MonoBehaviour
 {
+    public float sortOffset = 0;
     void Start()
     {
-        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
+        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt((-transform.position.y * 100) + sortOffset);
     }
 }

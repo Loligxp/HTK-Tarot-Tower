@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _myTower: {fileID: 11400000, guid: 13ce91c1af3a6674e8cd0094f01048d7, type: 2}
+  _weirdFix: {fileID: 0}
+  _lovers: {fileID: 0}
   _enemiesInRange: []
   scanMask:
     serializedVersion: 2
@@ -145,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sortOffset: 0
 --- !u!95 &946092644
 Animator:
   serializedVersion: 4
@@ -262,3 +265,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sortOffset: 20
