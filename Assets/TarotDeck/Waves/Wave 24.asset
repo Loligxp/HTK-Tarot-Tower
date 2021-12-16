@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Wave 24
   m_EditorClassIdentifier: 
   easyEnemies: 30
-  easyInterval: 0.5
+  easyInterval: 0.25
   MediumEnemies: 65
-  MediumInterval: 0.75
+  MediumInterval: 0.5
   StrongEnemies: 50
-  StrongInterval: 1
+  StrongInterval: 0.75
   CamoEnemies: 15
-  CamoInterval: 1
+  CamoInterval: 0.5
   FrostEnemies: 0
   FrostInterval: 0
   FireEnemies: 0

@@ -51,7 +51,7 @@ MonoBehaviour:
   myEnemyType: 4
   _movementSpeed: 2
   _health: 4
-  _worth: 10
+  _worth: 8
   _damage: 5
   _goalPosition: {fileID: 0}
   _activeDebuffs: []

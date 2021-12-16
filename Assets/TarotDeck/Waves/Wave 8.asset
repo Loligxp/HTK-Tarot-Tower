@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Wave 8
   m_EditorClassIdentifier: 
   easyEnemies: 30
-  easyInterval: 0.5
+  easyInterval: 0.25
   MediumEnemies: 25
-  MediumInterval: 0.75
+  MediumInterval: 0.5
   StrongEnemies: 15
-  StrongInterval: 1
+  StrongInterval: 0.75
   CamoEnemies: 0
   CamoInterval: 0
   FrostEnemies: 0
