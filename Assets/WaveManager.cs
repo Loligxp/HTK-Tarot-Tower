@@ -90,7 +90,7 @@ public class WaveManager : MonoSingleton<WaveManager>
                     newEnemy = FireEnemy;
                     break;
             }
-
+            enemiesSpawned = 0;
             while (enemiesSpawned < newEnemyCount)
             {
                 Instantiate(newEnemy, _startPoint.position, Quaternion.identity);

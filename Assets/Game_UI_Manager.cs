@@ -11,7 +11,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     private bool buildModeActive = false;
     private int towerID_Active = 0;
     public LayerMask buildMask;
-    public float buildSize;
+    public Vector2 buildSize;
     public GameObject buildPreview;
     public GameObject LastValidBuildPosObject;
     public SpriteRenderer buildPreviewSPR;
@@ -41,7 +41,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             buildPreviewSPR.sprite = GameManager.Instance.scriptableTowerList[towerID_Active].tower_Sprite;
             var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0;
-            var cast = Physics2D.OverlapCircleAll(mousePos,buildSize / 2,buildMask);
+            var cast = Physics2D.OverlapBoxAll(mousePos,buildSize,0,buildMask);
             buildPreview.transform.localScale = Vector3.one;
             buildPreview.transform.position = mousePos + Vector3.up * 0.4f;
 
@@ -100,6 +100,16 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
 
         if (Time.timeScale == 1f && FastForward)
             Time.timeScale = 2f;
+    }
+
+    public void OnDrawGizmos()
+    {
+        Vector3 buildSizeee = buildSize;
+        buildSizeee.z = 50;
+
+        Vector3 mous = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mous.z = 0;
+        Gizmos.DrawWireCube(mous,buildSize);
     }
 
     public void SelectTower(int ID)
