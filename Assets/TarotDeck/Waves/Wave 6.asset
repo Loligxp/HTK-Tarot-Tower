@@ -15,7 +15,7 @@ MonoBehaviour:
   easyEnemies: 30
   easyInterval: 0.25
   MediumEnemies: 20
-  MediumInterval: 0.05
+  MediumInterval: 0.5
   StrongEnemies: 5
   StrongInterval: 1
   CamoEnemies: 0

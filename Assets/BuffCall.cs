@@ -11,7 +11,7 @@ public class BuffCall : MonoBehaviour
     /// </summary>
     void Start()
     {
-        var towersToBuff = Physics2D.OverlapCircleAll(transform.position,range / 2,hitMask);
+        var towersToBuff = Physics2D.OverlapCircleAll(transform.position,range / 4,hitMask);
         foreach (var item in towersToBuff)
         {
             var towerBase = item.GetComponent<TowerBase>();

@@ -19,6 +19,10 @@ public class TowerBase : MonoBehaviour
     private float _damageBuff, _fireRateBuff, _rangeBuff;
     public GameObject HitScanHitFX;
 
+    [Space]
+    public GameObject unrealBullet;
+    public GameObject UnityBullet;
+    public bool RolandoUnreal;
     private void OnMouseDown()
     {
         if(_myTower != _weirdFix)
@@ -114,7 +118,32 @@ public class TowerBase : MonoBehaviour
                 case ScriptableTower.TowerTypes.Rolando:
                     if (_enemiesInRange.Count != 0)
                     {
-                        HitScan_Attack();
+                        if (RolandoUnreal)
+                        {
+                            var bullet = Instantiate(unrealBullet, transform.position, Quaternion.identity);
+                            var bulletScript = bullet.GetComponent<Projectile>();
+
+                            bulletScript._direction = (_enemiesInRange[0].transform.position - transform.position).normalized;
+
+                            var buffDamage = _damageBuff;
+                            if (buffDamage == 0)
+                                buffDamage = 1;
+                            bulletScript.damage *= buffDamage;
+                            RolandoUnreal = !RolandoUnreal;
+                        }
+                        else
+                        {
+                            var bullet = Instantiate(UnityBullet, transform.position, Quaternion.identity);
+                            var bulletScript = bullet.GetComponent<Projectile>();
+
+                            bulletScript._direction = (_enemiesInRange[0].transform.position - transform.position).normalized;
+
+                            var buffDamage = _damageBuff;
+                            if (buffDamage == 0)
+                                buffDamage = 1;
+                            bulletScript.damage *= buffDamage;
+                            RolandoUnreal = !RolandoUnreal;
+                        }
                         timer = 0;
                     }
                     break;

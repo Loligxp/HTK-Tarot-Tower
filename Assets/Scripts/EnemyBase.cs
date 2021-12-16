@@ -29,6 +29,7 @@ public class EnemyBase : MonoBehaviour
 
     private SpriteRenderer SPR;
 
+   
     private void Start()
     {
         WaveManager.EnemiesAlive++;

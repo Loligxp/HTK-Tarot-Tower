@@ -155,6 +155,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 320
   _activeBuffs: []
+  HitScanHitFX: {fileID: 0}
+  unrealBullet: {fileID: 5333753950661775874, guid: db1e80e8e1f357d448ac0de809aa7308, type: 3}
+  UnityBullet: {fileID: 8054250685943311470, guid: da92b7eaf54b1c940ab83e37cdef62d7, type: 3}
+  RolandoUnreal: 0
 --- !u!212 &8586651571435166896
 SpriteRenderer:
   m_ObjectHideFlags: 0
