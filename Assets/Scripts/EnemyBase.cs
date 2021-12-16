@@ -27,17 +27,33 @@ public class EnemyBase : MonoBehaviour
     public List<ScriptableDebuffs> _activeDebuffs;
     public float burnStrenght, freezeStrenght;
 
+    private SpriteRenderer SPR;
+
     private void Start()
     {
+        WaveManager.EnemiesAlive++;
             _goalPosition = PathManager.Instance.GetStartPosition();
         GetComponent<Collider2D>().enabled = false;
+        SPR = GetComponent<SpriteRenderer>();
         StartCoroutine(delayActive());
+    }
+
+    private void OnDestroy()
+    {
+        WaveManager.EnemiesAlive--;
     }
 
     IEnumerator delayActive()
     {
         yield return new WaitForSeconds(1f);
         GetComponent<Collider2D>().enabled = true;
+    }
+
+    IEnumerator HitFlash()
+    {
+        SPR.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        SPR.color = Color.white;
     }
     void Update()
     {
@@ -109,6 +125,7 @@ public class EnemyBase : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _health -= damage;
+        StartCoroutine(HitFlash());
     }
 
     public void TakeDamage(float damage, ScriptableDebuffs newDebuff)
@@ -116,5 +133,6 @@ public class EnemyBase : MonoBehaviour
         _health -= damage;
 
         StartCoroutine(AddDebuff(newDebuff));
+        StartCoroutine(HitFlash());
     }
 }

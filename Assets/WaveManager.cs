@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaveManager : MonoSingleton<WaveManager>
 {
+    public static int EnemiesAlive;
+    private float timer;
     [SerializeField]
     Transform _startPoint;
 
@@ -26,8 +28,16 @@ public class WaveManager : MonoSingleton<WaveManager>
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-         //   startWave();
+        if (EnemiesAlive == 0)
+            timer += Time.deltaTime;
+        else
+            timer = 0;
+
+        if(timer > 1 && Game_UI_Manager.Instance.autoPlayActive)
+        {
+            startWave();
+            timer = 0;
+        }
     }
 
     public void startWave()

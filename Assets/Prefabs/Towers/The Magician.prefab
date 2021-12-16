@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6751778646035125982}
   - component: {fileID: 8096032781181361556}
   - component: {fileID: -5827121211326937637}
+  - component: {fileID: 697280836}
   m_Layer: 7
   m_Name: The Magician
   m_TagString: Untagged
@@ -143,3 +144,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &697280836
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6751778646035125977}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e9bfac93a0004e40ad33f4c2072058f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

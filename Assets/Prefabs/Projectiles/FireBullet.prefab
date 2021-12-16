@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8558579985757688377}
   - component: {fileID: 1562256707992368834}
   - component: {fileID: 1562256707992368835}
+  - component: {fileID: -6204686177780481767}
   m_Layer: 0
   m_Name: FireBullet
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8558579985757688378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,6 +53,7 @@ MonoBehaviour:
   damage: 3
   piercing: 0
   _direction: {x: 0, y: 0}
+  HitEffect: {fileID: 8531603405029945406, guid: d9d54cda611f5a548b46d2e81efce73c, type: 3}
 --- !u!58 &1562256707992368834
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -67,7 +69,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!212 &1562256707992368835
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -106,11 +108,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1414335391
+  m_SortingLayer: 2
   m_SortingOrder: 4
-  m_Sprite: {fileID: -2413806693520163455, guid: c48de60615f712d4f8708692939a9f0a, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.01760149, a: 1}
+  m_Sprite: {fileID: -329714527, guid: 7f7428f174f33b04d9d748cba73d43ec, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,3 +122,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6204686177780481767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8558579985757688378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7cd198a49eeb7846ab3bd18d52d5aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7587388264500734140}
   - component: {fileID: 4945534452543448054}
   - component: {fileID: 3182230099489939466}
+  - component: {fileID: 480914129}
   m_Layer: 7
   m_Name: The Fool
   m_TagString: Untagged
@@ -143,3 +144,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &480914129
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7587388264500734139}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2380da786dfad6448a36ab6fbfe8d612, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

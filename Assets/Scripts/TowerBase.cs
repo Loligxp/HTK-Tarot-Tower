@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TowerBase : MonoBehaviour
 {
@@ -12,13 +13,30 @@ public class TowerBase : MonoBehaviour
     private List<GameObject> _enemiesInRange;
     public LayerMask scanMask;
     public List<ScriptableBuffs> _activeBuffs;
-
+    private SpriteRenderer SPR;
     private float _damageBuff, _fireRateBuff, _rangeBuff;
+
+    private void OnMouseDown()
+    {
+        Game_UI_Manager.Instance.SelectActiveTower(_myTower,this.gameObject);
+    }
+
+    private void OnMouseEnter()
+    {
+        SPR.color = Color.blue;
+    }
+
+    private void OnMouseExit()
+    {
+        SPR.color = Color.white;
+    }
 
     private void Start()
     {
         if (_myTower.towerType == ScriptableTower.TowerTypes.WheelOfFortune)
             WaveManager.Instance.FortuneStart += WheelOfFortuneSpin;
+
+        SPR = GetComponent<SpriteRenderer>();
     }
 
     public void Sell()
@@ -168,5 +186,6 @@ public class TowerBase : MonoBehaviour
 
         Gizmos.DrawSphere(transform.position,(_myTower.range + _rangeBuff) / 2);
     }
+
 }
 

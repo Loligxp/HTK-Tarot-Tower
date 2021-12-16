@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4734193019313943911}
   - component: {fileID: 7807829411118530093}
   - component: {fileID: 6304749355662949032}
+  - component: {fileID: 1690178288}
   m_Layer: 7
   m_Name: The Moon
   m_TagString: Untagged
@@ -143,3 +144,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1690178288
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4734193019313943904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f4043f5c33a827a499c88ef7d10070f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

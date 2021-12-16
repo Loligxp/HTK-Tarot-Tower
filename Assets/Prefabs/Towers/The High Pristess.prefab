@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7779343747794685613}
   - component: {fileID: 5051921542975522279}
   - component: {fileID: -7556614989586573533}
+  - component: {fileID: 1172692327}
   m_Layer: 9
   m_Name: The High Pristess
   m_TagString: Untagged
@@ -143,3 +144,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1172692327
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7779343747794685610}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a8b71256e2e92043acdae0f9c1fb15b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

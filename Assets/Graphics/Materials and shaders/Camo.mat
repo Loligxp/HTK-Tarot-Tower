@@ -39,9 +39,9 @@ Material:
     m_Floats:
     - _HueShiftSpeed: 0
     m_Colors:
-    - _BodyOutline: {r: 0.6415094, g: 0.06959774, b: 0.06959774, a: 0}
-    - _FillColor: {r: 1, g: 0.2122642, b: 0.2122642, a: 1}
-    - _FinColor: {r: 1, g: 0.5235849, b: 0.5235849, a: 0}
-    - _HighlightColor: {r: 1, g: 0.759434, b: 0.759434, a: 0}
-    - _ShadeColor: {r: 0.3584906, g: 0.04565682, b: 0.04565682, a: 0}
+    - _BodyOutline: {r: 0, g: 0, b: 0.4156863, a: 0}
+    - _FillColor: {r: 0.2627451, g: 0.47450984, b: 0.76470596, a: 1}
+    - _FinColor: {r: 0.38431376, g: 0.6862745, b: 0.8588236, a: 0}
+    - _HighlightColor: {r: 0.6509804, g: 0.91372555, b: 1, a: 0}
+    - _ShadeColor: {r: 0.10588236, g: 0.23529413, b: 0.6156863, a: 0}
   m_BuildTextureStacks: []

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
 {
     
@@ -17,7 +18,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     public SpriteRenderer buildPreviewSPR;
 
     private bool canBuild;
-
+    public bool autoPlayActive = false;
     public bool FastForward;
     public Image fastForwardButton;
     public Sprite fastForwardButtonUnpressed, fastForwardButtonDepressed;
@@ -25,6 +26,10 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     [Space]
     public TextMeshProUGUI towerDescriptionText;
     public Image towerCardImage;
+
+    private bool sellModeActive;
+    private GameObject sellTowerObject;
+    public GameObject sellEffect;
     void Update()
     {
         lifeText.text = GameManager.Instance.Life.ToString();
@@ -98,8 +103,29 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             }
         }
 
+        if (sellModeActive)
+        {
+            sellEffect.transform.position = sellTowerObject.transform.position + -Vector3.up * 2;
+        }
+        else
+        {
+            sellEffect.transform.position = Vector3.up * 9000;
+        }
+
+        if(sellModeActive && Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(sellTowerObject);
+            sellModeActive = false;
+        }
+
         if (Time.timeScale == 1f && FastForward)
             Time.timeScale = 2f;
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            sellModeActive = false;
+            buildModeActive = false;
+        }
     }
 
     public void OnDrawGizmos()
@@ -112,10 +138,31 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
         Gizmos.DrawWireCube(mous,buildSize);
     }
 
+    public void SelectActiveTower(ScriptableTower towerType, GameObject towerObject)
+    {
+        for (int i = 0; i < GameManager.Instance.scriptableTowerList.Count; i++)
+        {
+            if(GameManager.Instance.scriptableTowerList[i] == towerType)
+            {
+                towerID_Active = i;
+                sellModeActive = true;
+                buildModeActive = true;
+                sellTowerObject = towerObject;
+                break;
+            }
+        }
+    }
+
     public void SelectTower(int ID)
     {
         buildModeActive = true;
+        sellModeActive = false;
         towerID_Active = ID;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void SwitchFastForwardMode()
@@ -132,5 +179,10 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             fastForwardButton.sprite = fastForwardButtonUnpressed;
             Time.timeScale = 1f;
         }
+    }
+
+    public void SetAutoPlay(bool set)
+    {
+        autoPlayActive = set;
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2828839040414559090}
   - component: {fileID: 768934738511323192}
   - component: {fileID: 9149044840163720423}
+  - component: {fileID: 946092644}
   m_Layer: 7
   m_Name: The Sun
   m_TagString: Untagged
@@ -143,3 +144,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04df6de787333594983757840c45898d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &946092644
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2828839040414559093}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 608020e9c44c9b84e81d06d22228b19b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

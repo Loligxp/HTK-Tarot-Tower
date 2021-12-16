@@ -13,6 +13,7 @@ public class GameManager : MonoSingleton<GameManager>
     private void Start()
     {
         money = 400;
+        Time.timeScale = 1;
     }
 
     public void AddCoins(int amount)
