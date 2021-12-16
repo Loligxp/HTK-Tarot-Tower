@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Increases the fire rate of all Froggies in range
   towerType: 1
   UI_Sprite: {fileID: 21300000, guid: e4a1df23342195f4288f77df192a8fc5, type: 3}
-  tower_Sprite: {fileID: 425073656, guid: fde3b54663cff6e489a6c39876b7350f, type: 3}
+  tower_Sprite: {fileID: 1189754847, guid: 7b882bbf05ac5a742bfbe65cac6104a4, type: 3}
   cost: 550
   damage: 0
   range: 3

@@ -23,7 +23,7 @@ public class TowerBase : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        SPR.color = Color.blue;
+        SPR.color = (Color.white * 3 + Color.blue) / 4;
     }
 
     private void OnMouseExit()
@@ -39,11 +39,22 @@ public class TowerBase : MonoBehaviour
         SPR = GetComponent<SpriteRenderer>();
     }
 
+    public float ReturnRange()
+    {
+        if (_rangeBuff > 1)
+        {
+            return _myTower.range * _rangeBuff;
+        }
+        else
+            return _myTower.range;
+    }
+
     public void Sell()
     {
         if (_myTower.towerType == ScriptableTower.TowerTypes.WheelOfFortune)
             WaveManager.Instance.FortuneStart -= WheelOfFortuneSpin;
 
+        GameManager.Instance.AddCoins(_myTower.cost/2);
         Destroy(this.gameObject);
     }
 
@@ -137,7 +148,12 @@ public class TowerBase : MonoBehaviour
 
     void ScanForEnemies()
     {
-        var enemiesFound = Physics2D.OverlapCircleAll(transform.position,(_myTower.range + _rangeBuff) /2, scanMask);
+        Collider2D[] enemiesFound;
+        if (_rangeBuff > 1)
+           enemiesFound  = Physics2D.OverlapCircleAll(transform.position,(_myTower.range * _rangeBuff) /2, scanMask);
+        else
+            enemiesFound = Physics2D.OverlapCircleAll(transform.position, (_myTower.range) / 2, scanMask);
+
 
         _enemiesInRange = new List<GameObject>();
 

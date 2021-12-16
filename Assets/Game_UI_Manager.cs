@@ -29,9 +29,20 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
 
     private bool sellModeActive;
     private GameObject sellTowerObject;
+    private TowerBase sellTowerScript;
     public GameObject sellEffect;
+    public GameObject rangeIndicator;
+    public GameObject sellButton;
+
+    private void Start()
+    {
+        towerID_Active = 4;
+    }
+
     void Update()
     {
+        sellButton.SetActive(sellModeActive);
+
         lifeText.text = GameManager.Instance.Life.ToString();
         moneyText.text = GameManager.Instance.money.ToString();
         waveText.text = WaveManager.Instance.currentWave.ToString();
@@ -50,7 +61,10 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             buildPreview.transform.localScale = Vector3.one;
             buildPreview.transform.position = mousePos + Vector3.up * 0.4f;
 
-            if(cast.Length == 0)
+            rangeIndicator.transform.position = mousePos + Vector3.up * 0.4f;
+            rangeIndicator.transform.localScale = Vector3.one * GameManager.Instance.scriptableTowerList[towerID_Active].range;
+
+            if (cast.Length == 0)
             {
                 canBuild = true;
                 buildPreviewSPR.color = new Color(0,1,0,0.2f);
@@ -105,16 +119,22 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
 
         if (sellModeActive)
         {
-            sellEffect.transform.position = sellTowerObject.transform.position + -Vector3.up * 2;
+            sellEffect.transform.position = sellTowerObject.transform.position + -Vector3.up * 0.4f;
+            rangeIndicator.transform.position = sellTowerObject.transform.position;
+            rangeIndicator.transform.localScale = Vector3.one * sellTowerScript.ReturnRange();
         }
         else
         {
             sellEffect.transform.position = Vector3.up * 9000;
+
+            if(!buildModeActive)
+                rangeIndicator.transform.position = Vector3.up * 9000;
+
         }
 
-        if(sellModeActive && Input.GetKeyDown(KeyCode.F))
+        if (sellModeActive && Input.GetKeyDown(KeyCode.F))
         {
-            Destroy(sellTowerObject);
+            sellTowerObject.GetComponent<TowerBase>().Sell();
             sellModeActive = false;
         }
 
@@ -125,6 +145,15 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
         {
             sellModeActive = false;
             buildModeActive = false;
+        }
+    }
+
+    public void SellTower()
+    {
+        if (sellModeActive)
+        {
+            sellTowerObject.GetComponent<TowerBase>().Sell();
+            sellModeActive = false;
         }
     }
 
@@ -148,6 +177,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
                 sellModeActive = true;
                 buildModeActive = true;
                 sellTowerObject = towerObject;
+                sellTowerScript = towerObject.GetComponent<TowerBase>();
                 break;
             }
         }

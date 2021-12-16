@@ -46,6 +46,9 @@ TagManager:
   - name: Towers
     uniqueID: 788143399
     locked: 0
+  - name: Props
+    uniqueID: 3875786875
+    locked: 0
   - name: Effects
     uniqueID: 2880631905
     locked: 0
