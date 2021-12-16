@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FreezeDebuff
   m_EditorClassIdentifier: 
   debuffName: Freeze
-  debuffLenght: 2
+  debuffLenght: 4
   fireDebuff: 0
   freezeDebuff: 2
