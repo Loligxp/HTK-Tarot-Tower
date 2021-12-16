@@ -51,9 +51,11 @@ public class EnemyBase : MonoBehaviour
 
     IEnumerator HitFlash()
     {
-        SPR.color = Color.red;
+        if(SPR != null)
+            SPR.color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        SPR.color = Color.white;
+        if (SPR != null)
+            SPR.color = Color.white;
     }
     void Update()
     {
