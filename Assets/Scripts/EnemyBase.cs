@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class EnemyBase : MonoBehaviour
 {
     public enum EnemyTypes
@@ -47,11 +47,19 @@ public class EnemyBase : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (myEnemyType != EnemyTypes.FreezeRes)
-            transform.position = Vector2.MoveTowards(transform.position,_goalPosition.transform.position,Time.deltaTime * Mathf.Clamp(_movementSpeed - freezeStrenght,0,99));
-        else
-            transform.position = Vector2.MoveTowards(transform.position, _goalPosition.transform.position, Time.deltaTime * Mathf.Clamp(_movementSpeed, 0, 99));
-
+        try
+        {
+            if (myEnemyType != EnemyTypes.FreezeRes)
+                transform.position = Vector2.MoveTowards(transform.position, _goalPosition.transform.position, Time.deltaTime * Mathf.Clamp(_movementSpeed - freezeStrenght, 0, 99));
+            else
+                transform.position = Vector2.MoveTowards(transform.position, _goalPosition.transform.position, Time.deltaTime * Mathf.Clamp(_movementSpeed, 0, 99));
+        }
+        catch (Exception e)
+        {
+            GameManager.Instance.RemoveLife(_damage);
+            Destroy(this.gameObject);
+            return;
+        }
         transform.up = transform.position - _goalPosition.transform.position;
 
         if(myEnemyType != EnemyTypes.FireRes)

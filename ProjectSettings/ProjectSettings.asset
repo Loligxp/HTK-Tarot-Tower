@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: HTK Tarot Tower
-  defaultCursor: {fileID: 2800000, guid: 719e076b737793746bffb52ea8af5030, type: 3}
+  defaultCursor: {fileID: 2800000, guid: fcc3ed6df6bdbb1459c5100ccf27dbec, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
