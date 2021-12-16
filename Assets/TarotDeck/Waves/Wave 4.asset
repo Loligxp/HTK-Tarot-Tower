@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Wave 4
   m_EditorClassIdentifier: 
   easyEnemies: 30
-  easyInterval: 0.5
+  easyInterval: 0.25
   MediumEnemies: 10
-  MediumInterval: 0.75
+  MediumInterval: 0.5
   StrongEnemies: 0
   StrongInterval: 0
   CamoEnemies: 0

@@ -155,6 +155,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 320
   _activeBuffs: []
+  HitScanHitFX: {fileID: 2241098279797321653, guid: 9bd5f60ace41a904a82da03baae7b4e1, type: 3}
 --- !u!212 &5124249858239222356
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class TowerBase : MonoBehaviour
     public List<ScriptableBuffs> _activeBuffs;
     private SpriteRenderer SPR;
     private float _damageBuff, _fireRateBuff, _rangeBuff;
+    public GameObject HitScanHitFX;
 
     private void OnMouseDown()
     {
@@ -99,7 +100,6 @@ public class TowerBase : MonoBehaviour
                     if (_enemiesInRange.Count != 0)
                     {
                         HitScan_Attack();
-                        timer = 0;
                     }
                     break;
                 case ScriptableTower.TowerTypes.Decloack:
@@ -129,7 +129,12 @@ public class TowerBase : MonoBehaviour
 
     void HitScan_Attack()
     {
-        _enemiesInRange[0].GetComponent<EnemyBase>().TakeDamage(_myTower.damage);
+        var i = Random.Range(0,_enemiesInRange.Count);
+
+        Instantiate(HitScanHitFX, _enemiesInRange[i].transform.position, _enemiesInRange[i].transform.rotation);
+        _enemiesInRange[i].GetComponent<EnemyBase>().TakeDamage(_myTower.damage);
+        timer = 0;
+
     }
 
     void AOE_Attack()
