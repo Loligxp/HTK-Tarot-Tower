@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The Sun
   m_EditorClassIdentifier: 
   towerName: The Sun
-  description: Burns Fishies in range
+  description: ' An elemental Froggy that burns Fishies in range'
   towerType: 2
   UI_Sprite: {fileID: 21300000, guid: dcb2546b6d7c3c24db401f4762bab7a2, type: 3}
   tower_Sprite: {fileID: 708088937, guid: 96f8de918a75a5a459fcb359148a5312, type: 3}

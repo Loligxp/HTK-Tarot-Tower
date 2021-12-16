@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 718942284953922950}
   - component: {fileID: -2363200527943922230}
   - component: {fileID: 1480451752}
+  - component: {fileID: 5927384366397844715}
   m_Layer: 7
   m_Name: The Lovers
   m_TagString: Untagged
@@ -147,6 +148,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5927384366397844715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2417753755246806880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ad362d250351e4f951c484ecfa0f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myTower: {fileID: 11400000, guid: d3a5c5c9a7a36c642981db9b68604f16, type: 2}
+  _weirdFix: {fileID: 11400000, guid: d3a5c5c9a7a36c642981db9b68604f16, type: 2}
+  _lovers: {fileID: 11400000, guid: 31ae189153c7c2a46b3e108cc2da1661, type: 2}
+  _enemiesInRange: []
+  scanMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _activeBuffs: []
 --- !u!1001 &2417753755648246009
 PrefabInstance:
   m_ObjectHideFlags: 0

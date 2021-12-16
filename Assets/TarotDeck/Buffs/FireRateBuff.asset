@@ -15,4 +15,5 @@ MonoBehaviour:
   buffName: FireRateBuff
   buffLenght: 1
   damageBuff: 0
-  fireRateBuff: 1
+  fireRateBuff: 1.5
+  rangeBuff: 0

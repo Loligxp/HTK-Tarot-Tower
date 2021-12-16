@@ -7,6 +7,8 @@ public class TowerBase : MonoBehaviour
 {
     [SerializeField]
     private ScriptableTower _myTower;
+    public ScriptableTower _weirdFix;
+    public ScriptableTower _lovers;
 
     private float timer;
     [SerializeField]
@@ -18,7 +20,10 @@ public class TowerBase : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Game_UI_Manager.Instance.SelectActiveTower(_myTower,this.gameObject);
+        if(_myTower != _weirdFix)
+            Game_UI_Manager.Instance.SelectActiveTower(_myTower,this.gameObject);
+        else
+            Game_UI_Manager.Instance.SelectActiveTower(_lovers, this.gameObject);
     }
 
     private void OnMouseEnter()
@@ -62,7 +67,11 @@ public class TowerBase : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 1 / (_myTower.fireRate + _fireRateBuff))
+        var actualFireRate = _myTower.fireRate * _fireRateBuff;
+        if (actualFireRate == 0)
+            actualFireRate = _myTower.fireRate;
+
+        if (timer > 1 / (actualFireRate))
         {
             ScanForEnemies();
 
@@ -143,7 +152,7 @@ public class TowerBase : MonoBehaviour
         var bulletScript = bullet.GetComponent<Projectile>();
 
         bulletScript._direction = (_enemiesInRange[0].transform.position - transform.position).normalized;
-        bulletScript.damage += _damageBuff;
+        bulletScript.damage *= _damageBuff;
     }
 
     void ScanForEnemies()
