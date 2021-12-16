@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave 2
   m_EditorClassIdentifier: 
   easyEnemies: 40
-  easyInterval: 1
+  easyInterval: 0.5
   MediumEnemies: 0
   MediumInterval: 0
   StrongEnemies: 0

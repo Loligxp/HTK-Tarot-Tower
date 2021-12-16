@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebe4eca3dac67f4aa46923b9ec9d805, type: 3}
   m_Name: Wave 18
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7525877288813776077, guid: 4c2e81a3417bc5244b0d28a400161977, type: 3}
-  spawnCount: 50
-  spawnInterval: 0.5
+  easyEnemies: 10
+  easyInterval: 0.5
+  MediumEnemies: 5
+  MediumInterval: 0.75
+  StrongEnemies: 5
+  StrongInterval: 1
+  CamoEnemies: 5
+  CamoInterval: 1
+  FrostEnemies: 30
+  FrostInterval: 1
+  FireEnemies: 30
+  FireInterval: 1

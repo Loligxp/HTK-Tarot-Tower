@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebe4eca3dac67f4aa46923b9ec9d805, type: 3}
   m_Name: Wave 6
   m_EditorClassIdentifier: 
-  easyEnemies: 10
-  easyInterval: 0.2
-  MediumEnemies: 10
-  MediumInterval: 0.2
-  StrongEnemies: 10
-  StrongInterval: 0.2
-  CamoEnemies: 10
-  CamoInterval: 0.2
-  FrostEnemies: 10
-  FrostInterval: 0.2
-  FireEnemies: 10
-  FireInterval: 0.2
+  easyEnemies: 30
+  easyInterval: 0.5
+  MediumEnemies: 20
+  MediumInterval: 0.75
+  StrongEnemies: 5
+  StrongInterval: 1
+  CamoEnemies: 0
+  CamoInterval: 1
+  FrostEnemies: 0
+  FrostInterval: 1
+  FireEnemies: 0
+  FireInterval: 1
