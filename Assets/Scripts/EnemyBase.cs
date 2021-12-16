@@ -65,8 +65,12 @@ public class EnemyBase : MonoBehaviour
 
         try
         {
+            var freezecut = freezeStrenght;
+            if (freezecut < 1)
+                freezecut = 1;
+
             if (myEnemyType != EnemyTypes.FreezeRes)
-                transform.position = Vector2.MoveTowards(transform.position, _goalPosition.transform.position, Time.deltaTime * Mathf.Clamp(_movementSpeed - freezeStrenght, 0, 99));
+                transform.position = Vector2.MoveTowards(transform.position, _goalPosition.transform.position, Time.deltaTime * Mathf.Clamp(_movementSpeed / freezecut, 0, 99));
             else
                 transform.position = Vector2.MoveTowards(transform.position, _goalPosition.transform.position, Time.deltaTime * Mathf.Clamp(_movementSpeed, 0, 99));
         }

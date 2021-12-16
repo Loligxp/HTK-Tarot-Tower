@@ -50,7 +50,7 @@ MonoBehaviour:
   debuffBullet: 0
   debuffEffect: {fileID: 0}
   speed: 2
-  damage: 1
+  damage: 0.5
   piercing: 3
   _direction: {x: 0, y: 0}
   HitEffect: {fileID: 6040828804946381503, guid: 573a48bb0fbd43846a6920f5f8684f91, type: 3}
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1414335391
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 4
   m_Sprite: {fileID: 564838846, guid: c4fdc08170e00324d8b9ae8d44ba9a37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

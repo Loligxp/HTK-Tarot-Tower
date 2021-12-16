@@ -68,6 +68,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             {
                 canBuild = true;
                 buildPreviewSPR.color = new Color(0,1,0,0.2f);
+                rangeIndicator.SetActive(true);
                 LastValidBuildPosObject.transform.position = mousePos;
                 LastValidBuildPosObject.transform.localScale = Vector3.one * buildSize;
                 LastValidBuildPosObject.SetActive(true);
@@ -76,6 +77,8 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             }
             else
             {
+                rangeIndicator.SetActive(false);
+
                 if (Vector2.Distance(LastValidBuildPosObject.transform.position, mousePos) < 0.5f)
                 {
                 }
@@ -119,6 +122,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
 
         if (sellModeActive)
         {
+            rangeIndicator.SetActive(true);
             sellEffect.transform.position = sellTowerObject.transform.position + -Vector3.up * 0.4f;
             rangeIndicator.transform.position = sellTowerObject.transform.position;
             rangeIndicator.transform.localScale = Vector3.one * sellTowerScript.ReturnRange();

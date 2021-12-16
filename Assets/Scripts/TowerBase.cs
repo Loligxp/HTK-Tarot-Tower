@@ -152,7 +152,11 @@ public class TowerBase : MonoBehaviour
         var bulletScript = bullet.GetComponent<Projectile>();
 
         bulletScript._direction = (_enemiesInRange[0].transform.position - transform.position).normalized;
-        bulletScript.damage *= _damageBuff;
+
+        var buffDamage = _damageBuff;
+        if (buffDamage == 0)
+            buffDamage = 1;
+        bulletScript.damage *= buffDamage;
     }
 
     void ScanForEnemies()
