@@ -8,7 +8,11 @@ public class MusicManager : MonoBehaviour
     public int currentMusicID = 0;
     public AudioSource AudioSource;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void Update()
     {
         if (!AudioSource.isPlaying)

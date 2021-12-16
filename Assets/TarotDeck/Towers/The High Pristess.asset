@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05886e83da7d8504c92ac8fa3c0b9a63, type: 3}
   m_Name: The High Pristess
   m_EditorClassIdentifier: 
-  towerName: High Priestess
+  towerName: Priestess
   description: Detects any Fishies in range that try to hide underwater and reveals
     them to other towers
   towerType: 4

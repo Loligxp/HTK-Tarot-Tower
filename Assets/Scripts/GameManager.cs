@@ -27,7 +27,7 @@ public class GameManager : MonoSingleton<GameManager>
 
         if(Life <= 0)
         {
-            Debug.LogWarning("You died, noob");
+            Game_UI_Manager.Instance.GameLost = true;
         }
     }
 }

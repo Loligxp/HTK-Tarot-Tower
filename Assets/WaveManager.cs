@@ -53,7 +53,7 @@ public class WaveManager : MonoSingleton<WaveManager>
         {
             if (EnemiesAlive != 0)
                 return;
-            Debug.Log("You win!");
+            Game_UI_Manager.Instance.GameWon = true;
         }
 
         

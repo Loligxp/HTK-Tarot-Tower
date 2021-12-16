@@ -40,6 +40,12 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     public Image InfoButton;
     public Sprite InfoButtonSprite, InfoButtonSpriteDepressed;
 
+    [Space]
+    public bool GameLost;
+    public bool GameWon;
+    public GameObject winScreen, loseScreen;
+    public AudioSource buttonClick;
+
     private void Start()
     {
         towerID_Active = 4;
@@ -47,6 +53,14 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
 
     void Update()
     {
+        loseScreen.SetActive(GameLost);
+
+        if(!GameLost)
+            winScreen.SetActive(GameWon);
+
+        if (GameLost || GameWon)
+            Time.timeScale = 0;
+
         sellButton.SetActive(sellModeActive);
         InfoWindow.SetActive(InfoActive);
 
@@ -203,6 +217,10 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             }
         }
     }
+    public void ButtonClickSound()
+    {
+        buttonClick.Play();
+    }
 
     public void SelectTower(int ID)
     {
@@ -214,6 +232,11 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("StartScreen");
     }
 
     public void SwitchFastForwardMode()

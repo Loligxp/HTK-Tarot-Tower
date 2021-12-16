@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05886e83da7d8504c92ac8fa3c0b9a63, type: 3}
-  m_Name: Strenght
+  m_Name: Strength
   m_EditorClassIdentifier: 
-  towerName: Strenght
+  towerName: Strength
   description: Buffs the damage dealt by Froggies in range
   towerType: 1
   UI_Sprite: {fileID: 21300000, guid: 6fa56d786a14092449e6f235f4d8cd1a, type: 3}
