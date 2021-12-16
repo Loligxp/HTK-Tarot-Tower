@@ -33,8 +33,11 @@ public class Projectile : MonoBehaviour
 
             piercing--;
 
-            if(piercing < 0)
-                Destroy(this.gameObject);
+            if (piercing < 0)
+            {
+                transform.position += Vector3.up * 10000;
+                Destroy(this.gameObject, 1);
+            }
         }
     }
 }

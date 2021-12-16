@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FireDebuff
   m_EditorClassIdentifier: 
   debuffName: FireDebuff
-  debuffLenght: 1
-  fireDebuff: 1
+  debuffLenght: 4
+  fireDebuff: 0.5
   freezeDebuff: 0
