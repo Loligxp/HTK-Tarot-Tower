@@ -46,14 +46,17 @@ public class WaveManager : MonoSingleton<WaveManager>
         {
             StartCoroutine(SendWave(Waves[currentWave]));
             currentWave++;
+            if (FortuneStart != null)
+                FortuneStart();
         }
         else
         {
+            if (EnemiesAlive != 0)
+                return;
             Debug.Log("You win!");
         }
 
-        if(FortuneStart != null)
-            FortuneStart();
+        
     }
 
     IEnumerator SendWave(ScriptableWave newWave)
