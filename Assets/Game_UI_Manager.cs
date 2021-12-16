@@ -34,6 +34,12 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     public GameObject rangeIndicator;
     public GameObject sellButton;
 
+    [Space]
+    public bool InfoActive;
+    public GameObject InfoWindow;
+    public Image InfoButton;
+    public Sprite InfoButtonSprite, InfoButtonSpriteDepressed;
+
     private void Start()
     {
         towerID_Active = 4;
@@ -42,6 +48,12 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     void Update()
     {
         sellButton.SetActive(sellModeActive);
+        InfoWindow.SetActive(InfoActive);
+
+        if (InfoActive)
+            InfoButton.sprite = InfoButtonSpriteDepressed;
+        else
+            InfoButton.sprite = InfoButtonSprite;
 
         lifeText.text = GameManager.Instance.Life.ToString();
         moneyText.text = GameManager.Instance.money.ToString();
@@ -150,6 +162,11 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
             sellModeActive = false;
             buildModeActive = false;
         }
+    }
+
+    public void SwitchInfo()
+    {
+        InfoActive = !InfoActive;
     }
 
     public void SellTower()
