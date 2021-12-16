@@ -30,6 +30,14 @@ public class EnemyBase : MonoBehaviour
     private void Start()
     {
             _goalPosition = PathManager.Instance.GetStartPosition();
+        GetComponent<Collider2D>().enabled = false;
+        StartCoroutine(delayActive());
+    }
+
+    IEnumerator delayActive()
+    {
+        yield return new WaitForSeconds(1f);
+        GetComponent<Collider2D>().enabled = true;
     }
     void Update()
     {
