@@ -19,6 +19,6 @@ MonoBehaviour:
   tower_Sprite: {fileID: 708088937, guid: 96f8de918a75a5a459fcb359148a5312, type: 3}
   cost: 750
   damage: 0
-  range: 3
+  range: 4
   fireRate: 0.2
   projectile: {fileID: 8055860792613880194, guid: 36e3baccd916b2e4f97e1ee573400917, type: 3}
