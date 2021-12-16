@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PathNode
   - Enemy
+  - Camo
   layers:
   - Default
   - TransparentFX

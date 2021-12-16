@@ -106,6 +106,8 @@ public class TowerBase : MonoBehaviour
                     foreach (var item in _enemiesInRange)
                     {
                         item.layer = 6;
+                        item.tag = "Enemy";
+                        item.GetComponent<SpriteRenderer>().color = Color.white;
                     }
                     timer = 0;
                     break;
@@ -122,7 +124,7 @@ public class TowerBase : MonoBehaviour
 
     void WheelOfFortuneSpin()
     {
-        GameManager.Instance.AddCoins(Random.Range(0,11));
+        GameManager.Instance.AddCoins(Random.Range(0,101));
     }
 
     void HitScan_Attack()

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: WheelOfFortune
   m_EditorClassIdentifier: 
   towerName: Fortune
-  description: Generates a random amount of Flies between 0 and 10 at the start of
-    each round
+  description: Generates a random amount of Flies between 0 and 100 at the start
+    of each round
   towerType: 5
   UI_Sprite: {fileID: 21300000, guid: 98b7b1fdc246f31419138c2444ca739d, type: 3}
   tower_Sprite: {fileID: 1304272980, guid: 7131849506ed7824da3b6a15e3a0978e, type: 3}

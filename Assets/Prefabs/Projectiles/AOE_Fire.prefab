@@ -51,3 +51,4 @@ MonoBehaviour:
   AOE_Mask:
     serializedVersion: 2
     m_Bits: 64
+  HitEffect: {fileID: 1260431296405261114, guid: 2e40fee0327fefd43ac7d880fa39ed81, type: 3}
