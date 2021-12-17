@@ -24,10 +24,15 @@ public class WaveManager : MonoSingleton<WaveManager>
     public GameObject FrostEnemy;
     public GameObject FireEnemy;
 
-
+    [Space, SerializeField]
+    private Popups[] popups;
+    private bool popupActive;
 
     private void Update()
     {
+        if (popupActive)
+            Time.timeScale = 0;
+
         if (EnemiesAlive == 0)
             timer += Time.deltaTime;
         else
@@ -40,8 +45,24 @@ public class WaveManager : MonoSingleton<WaveManager>
         }
     }
 
+    public void ClosePopup(GameObject closeObject)
+    {
+        closeObject.SetActive(false);
+        popupActive = false;
+        Time.timeScale = 1;
+    }
+
     public void startWave()
     {
+        for (int i = 0; i < popups.Length; i++)
+        {
+            if(popups[i].wavePopup == currentWave)
+            {
+                popups[i].popupObject.SetActive(true);
+                popupActive = true;
+            }
+        }
+
         if (Waves.Count > currentWave)
         {
             StartCoroutine(SendWave(Waves[currentWave]));

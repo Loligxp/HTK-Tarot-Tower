@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebe4eca3dac67f4aa46923b9ec9d805, type: 3}
   m_Name: Wave 30
   m_EditorClassIdentifier: 
-  easyEnemies: 40
-  easyInterval: 0.25
+  easyEnemies: 80
+  easyInterval: 0.1
   MediumEnemies: 50
-  MediumInterval: 0.5
+  MediumInterval: 0.2
   StrongEnemies: 60
-  StrongInterval: 0.75
+  StrongInterval: 0.3
   CamoEnemies: 20
-  CamoInterval: 0.5
+  CamoInterval: 0.1
   FrostEnemies: 20
-  FrostInterval: 0.5
+  FrostInterval: 0.3
   FireEnemies: 20
-  FireInterval: 0.5
+  FireInterval: 0.3

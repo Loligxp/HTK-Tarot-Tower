@@ -46,6 +46,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     public GameObject winScreen, loseScreen;
     public AudioSource buttonClick;
 
+
     private void Start()
     {
         towerID_Active = 4;
@@ -71,7 +72,7 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
 
         lifeText.text = GameManager.Instance.Life.ToString();
         moneyText.text = GameManager.Instance.money.ToString();
-        waveText.text = WaveManager.Instance.currentWave.ToString();
+        waveText.text = WaveManager.Instance.currentWave.ToString() + "/30";
 
         towerDescriptionText.text = GameManager.Instance.scriptableTowerList[towerID_Active].description;
         towerCardImage.sprite = GameManager.Instance.scriptableTowerList[towerID_Active].UI_Sprite;
@@ -259,4 +260,11 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     {
         autoPlayActive = set;
     }
+}
+
+[System.Serializable]
+public class Popups
+{
+    public GameObject popupObject;
+    public int wavePopup;
 }

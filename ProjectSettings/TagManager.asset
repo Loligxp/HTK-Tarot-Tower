@@ -44,6 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Deco
+    uniqueID: 2491459305
+    locked: 0
   - name: Towers
     uniqueID: 788143399
     locked: 0

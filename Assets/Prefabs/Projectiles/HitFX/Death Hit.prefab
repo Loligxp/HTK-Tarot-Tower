@@ -4906,7 +4906,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1414335391
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_RenderMode: 1
   m_MeshDistribution: 0
@@ -4950,7 +4950,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 3537158387144014360, guid: 1a8fee684ddf8844fae7e9e15eb53aaf, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5f893b127c20aaa48aa986c64e14f208, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.747
   m_Pitch: 1
   Loop: 0
   Mute: 0

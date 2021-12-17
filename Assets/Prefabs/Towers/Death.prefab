@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 788143399
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 32767
   m_Sprite: {fileID: 21300000, guid: adb07106f6929da4188f396e37e5dc08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -156,6 +156,10 @@ MonoBehaviour:
     m_Bits: 320
   _activeBuffs: []
   HitScanHitFX: {fileID: 2241098279797321653, guid: 9bd5f60ace41a904a82da03baae7b4e1, type: 3}
+  unrealBullet: {fileID: 0}
+  UnityBullet: {fileID: 0}
+  RolandoUnreal: 0
+  anims: {fileID: 1592196941}
 --- !u!212 &5124249858239222356
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -195,7 +199,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 788143399
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: -879148523, guid: 8c5db238072eb0142b423e884653a513, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -23,6 +23,9 @@ public class TowerBase : MonoBehaviour
     public GameObject unrealBullet;
     public GameObject UnityBullet;
     public bool RolandoUnreal;
+
+    [Space]
+    public Animator anims;
     private void OnMouseDown()
     {
         if(_myTower != _weirdFix)
@@ -85,6 +88,7 @@ public class TowerBase : MonoBehaviour
                 case ScriptableTower.TowerTypes.Shooter:
                     if (_enemiesInRange.Count != 0)
                     {
+                        AnimationAttack();
                         BasicShot();
                         timer = 0;
 
@@ -104,6 +108,7 @@ public class TowerBase : MonoBehaviour
                     if (_enemiesInRange.Count != 0)
                     {
                         HitScan_Attack();
+                        AnimationAttack();
                     }
                     break;
                 case ScriptableTower.TowerTypes.Decloack:
@@ -149,6 +154,12 @@ public class TowerBase : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void AnimationAttack()
+    {
+        if(anims != null)
+            anims.SetTrigger("Attack");
     }
 
     void WheelOfFortuneSpin()
