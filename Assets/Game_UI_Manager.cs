@@ -46,6 +46,11 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
     public GameObject winScreen, loseScreen;
     public AudioSource buttonClick;
 
+    [Space]
+    public TextMeshProUGUI BestTimeText;
+    public TextMeshProUGUI NewTimeText;
+    private float speedrunTimer;
+
 
     private void Start()
     {
@@ -54,6 +59,41 @@ public class Game_UI_Manager : MonoSingleton<Game_UI_Manager>
 
     void Update()
     {
+        if (!GameWon)
+            speedrunTimer += Time.deltaTime;
+
+        if (GameWon)
+        {
+            /*
+            float minute = 0;
+            float sekunden = 0;
+
+            for (speedrunTimer; speedrunTimer > 60; speedrunTimer -= 60)
+            {
+                minute++;
+            }
+
+            for (speedrunTimer; speedrunTimer > 1; speedrunTimer -= 1)
+            {
+                sekunden++;
+            }*/
+
+            NewTimeText.text = "New Time: " + speedrunTimer;
+
+
+
+            var savedTime = PlayerPrefs.GetFloat("SpeedRun " + SceneManager.GetActiveScene().name, 999999);
+            if(savedTime < speedrunTimer)
+            {
+                BestTimeText.text = "Best time: " + savedTime;
+            }
+            else
+            {
+                BestTimeText.text = "Best time: " + speedrunTimer;
+                PlayerPrefs.SetFloat("SpeedRun " + SceneManager.GetActiveScene().name, speedrunTimer);
+            }
+        }
+
         loseScreen.SetActive(GameLost);
 
         if(!GameLost)
